@@ -1,4 +1,4 @@
-# Tech Blog starter-kit - vue3, nuxt3 with Contentful
+# Tech blog starter-kit with vue3, nuxt3 and Contentful
 
 - Vue3
 - Nuxt3
