@@ -20,6 +20,13 @@
 yarn dev -o
 ```
 
+# build and start
+
+```
+yarn build
+yarn start
+```
+
 # LICENSE
 
 - MIT
