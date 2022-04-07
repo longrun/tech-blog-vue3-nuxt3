@@ -1176,6 +1176,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^0.26.0":
+  version: 0.26.1
+  resolution: "axios@npm:0.26.1"
+  dependencies:
+    follow-redirects: ^1.14.8
+  checksum: d9eb58ff4bc0b36a04783fc9ff760e9245c829a5a1052ee7ca6013410d427036b1d10d04e7380c02f3508c5eaf3485b1ae67bd2adbfec3683704745c8d7a6e1a
+  languageName: node
+  linkType: hard
+
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
@@ -1631,6 +1640,41 @@ __metadata:
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
   checksum: 8755d76787f94e6cf79ce4666f0c5519906d7f5b02d4b884cf41e11dcd759ed69c57da0670afd9236d229a46e0f9cf519db0cd829c6dca820bb5a5c3def584ed
+  languageName: node
+  linkType: hard
+
+"contentful-resolve-response@npm:^1.3.0":
+  version: 1.3.3
+  resolution: "contentful-resolve-response@npm:1.3.3"
+  dependencies:
+    fast-copy: ^2.1.1
+  checksum: 0640c27842e8ace52f894c2944c3e9725d772ee56396488c0058933bd6d41a774e9d4f1f868fc5ad15cc630d72ff74a1f0feb97c3658c966862481d38a6635af
+  languageName: node
+  linkType: hard
+
+"contentful-sdk-core@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "contentful-sdk-core@npm:7.0.1"
+  dependencies:
+    fast-copy: ^2.1.0
+    lodash.isplainobject: ^4.0.6
+    lodash.isstring: ^4.0.1
+    p-throttle: ^4.1.1
+    qs: ^6.9.4
+  checksum: f2af67a4b54291989d0dc663d3861b167578ca539d090b60a9225f9c8c81041fbfe727c72d4e0b26f0b6d2cfd9d2e2a77229a222e23bf8ff61f2892e3c02c257
+  languageName: node
+  linkType: hard
+
+"contentful@npm:^9.1.18":
+  version: 9.1.18
+  resolution: "contentful@npm:9.1.18"
+  dependencies:
+    axios: ^0.26.0
+    contentful-resolve-response: ^1.3.0
+    contentful-sdk-core: ^7.0.1
+    fast-copy: ^2.1.0
+    json-stringify-safe: ^5.0.1
+  checksum: 65bf2e87155806b925786f8625ed90c2f8b5bf20754ebb25d5abd8f9c8a8557ed3a3280d357b361ccf4ff64d5dcf46eb1d466d177fe8bc08d3f81bc3cad67c14
   languageName: node
   linkType: hard
 
@@ -2499,6 +2543,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-copy@npm:^2.1.0, fast-copy@npm:^2.1.1":
+  version: 2.1.2
+  resolution: "fast-copy@npm:2.1.2"
+  checksum: b70da21471f0cc638a2caf2c9323e21b82a66a31596dac6eafff7be3a79d8b6029aea54fef9a6369395b4f97bd7b2f933a5a3fa842f29e2c8088512cf1cd0151
+  languageName: node
+  linkType: hard
+
 "fast-deep-equal@npm:^3.1.1":
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
@@ -2578,7 +2629,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.0.0":
+"follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.14.8":
   version: 1.14.9
   resolution: "follow-redirects@npm:1.14.9"
   peerDependenciesMeta:
@@ -3483,6 +3534,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json-stringify-safe@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "json-stringify-safe@npm:5.0.1"
+  checksum: 48ec0adad5280b8a96bb93f4563aa1667fd7a36334f79149abd42446d0989f2ddc58274b479f4819f1f00617957e6344c886c55d05a4e15ebb4ab931e4a6a8ee
+  languageName: node
+  linkType: hard
+
 "json5@npm:^2.2.1":
   version: 2.2.1
   resolution: "json5@npm:2.2.1"
@@ -3610,6 +3668,13 @@ __metadata:
   version: 4.0.6
   resolution: "lodash.isplainobject@npm:4.0.6"
   checksum: 29c6351f281e0d9a1d58f1a4c8f4400924b4c79f18dfc4613624d7d54784df07efaff97c1ff2659f3e085ecf4fff493300adc4837553104cef2634110b0d5337
+  languageName: node
+  linkType: hard
+
+"lodash.isstring@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.isstring@npm:4.0.1"
+  checksum: eaac87ae9636848af08021083d796e2eea3d02e80082ab8a9955309569cb3a463ce97fd281d7dc119e402b2e7d8c54a23914b15d2fc7fff56461511dc8937ba0
   languageName: node
   linkType: hard
 
@@ -4545,6 +4610,13 @@ nuxt3@latest:
   languageName: node
   linkType: hard
 
+"p-throttle@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "p-throttle@npm:4.1.1"
+  checksum: fe8709f3c3b1da7c033479375c2c302e80c1a5d86449013afa7cd46d1dc210bc824a7e4a9d088e66d31987d00878c2b5491bb2fe76246d4d2fc9a1636f5f8298
+  languageName: node
+  linkType: hard
+
 "parseurl@npm:~1.3.3":
   version: 1.3.3
   resolution: "parseurl@npm:1.3.3"
@@ -5046,6 +5118,15 @@ nuxt3@latest:
   languageName: node
   linkType: hard
 
+"qs@npm:^6.9.4":
+  version: 6.10.3
+  resolution: "qs@npm:6.10.3"
+  dependencies:
+    side-channel: ^1.0.4
+  checksum: 0fac5e6c7191d0295a96d0e83c851aeb015df7e990e4d3b093897d3ac6c94e555dbd0a599739c84d7fa46d7fee282d94ba76943983935cf33bba6769539b8019
+  languageName: node
+  linkType: hard
+
 "queue-microtask@npm:^1.2.2":
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
@@ -5334,6 +5415,7 @@ nuxt3@latest:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    contentful: ^9.1.18
     nuxt3: latest
   languageName: unknown
   linkType: soft
