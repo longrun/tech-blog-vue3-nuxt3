@@ -3,7 +3,22 @@
 - Vue3
 - Nuxt3
 - Vite
+- Volar
 - TypeScript
+- Yarn 3
+  - use .yarn/cache
+
+# init
+
+- use Node.js v16.14.2^
+- install VSCode extenstion `Volar`
+- `yarn install`
+
+# Start dev server
+
+```
+yarn dev -o
+```
 
 # LICENSE
 
