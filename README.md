@@ -20,6 +20,8 @@
 yarn dev -o
 ```
 
+But, does not work. see [issue #1](https://github.com/longrun/tech-blog-vue3-nuxt3/issues/1)
+
 # build and start
 
 ```
