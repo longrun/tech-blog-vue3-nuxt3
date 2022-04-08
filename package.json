@@ -8,5 +8,6 @@
   "devDependencies": {
     "contentful": "^9.1.18",
     "nuxt3": "latest"
-  }
+  },
+  "version": "0.0.1-alpha.0"
 }
