@@ -2,6 +2,8 @@
 const config = useRuntimeConfig();
 </script>
 <template>
-  <p>{{ config.SITE_TITLE }}</p>
+  <p class="text-2xl">{{ config.SITE_TITLE }}</p>
   <Entries />
 </template>
+
+<style></style>

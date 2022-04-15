@@ -18,9 +18,9 @@ console.log("topicEntry.fields.coverArt", topicEntry.fields.coverArt);
     <img
       :src="topicEntry.fields.coverArt.fields.file.url"
       alt="topicEntry.fields.coverArt.fields.title"
-      style="width: 80%"
+      class="w-10"
     />
-    <h1>
+    <h1 class="text-4xl">
       <router-link :to="`/entries/${topicEntry.sys.id}`">
         {{ topicEntry.fields.title }}
       </router-link>

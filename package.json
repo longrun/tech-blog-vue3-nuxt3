@@ -9,5 +9,8 @@
   "devDependencies": {
     "contentful": "^9.1.22",
     "nuxt3": "^3.0.0-27499173.3e7d6da"
+  },
+  "dependencies": {
+    "primeflex": "^3.1.3"
   }
 }
