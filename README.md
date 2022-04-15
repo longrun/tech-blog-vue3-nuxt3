@@ -7,6 +7,7 @@
 - TypeScript
 - Yarn 3
   - use .yarn/cache
+- [Primeflex](https://www.primefaces.org/primeflex/)
 
 # Init
 
@@ -35,10 +36,8 @@ Set site title on `nuxt.config.ts`.
 # Start dev server
 
 ```
-yarn dev -o
+yarn dev
 ```
-
-But, does not work. see [issue #1](https://github.com/longrun/tech-blog-vue3-nuxt3/issues/1)
 
 # build and start
 
