@@ -1,5 +1,12 @@
 <script lang="ts" setup>
 import contentful from "contentful";
+import upperFirst from "lodash.upperFirst";
+import camelCase from "lodash.camelCase";
+
+interface Props {
+  categoryId: string;
+}
+const props = defineProps<Props>();
 
 const config = useRuntimeConfig().private;
 
@@ -8,23 +15,16 @@ const client = contentful.createClient({
   accessToken: config.CONTENTFUL_ACCESS_TOKEN,
 });
 const entries = await client.getEntries({ order: "sys.createdAt" });
-const topicEntry = entries.items.shift();
-// console.log("entries", entries);
-// console.log("topicEntry.fields.coverArt", topicEntry.fields.coverArt);
+const categoryTitle = upperFirst(camelCase(props.categoryId));
+const entryCount = entries.items.length;
+useHead({
+  title: `${categoryTitle} に関する${entryCount}件の記事`,
+});
 </script>
 <template>
   <main>
-    <img
-      :src="topicEntry.fields.coverArt.fields.file.url"
-      alt="topicEntry.fields.coverArt.fields.title"
-      class="w-8"
-    />
-    <h1 class="text-4xl">
-      <NuxtLink :to="`/article/${topicEntry.sys.id}`">
-        {{ topicEntry.fields.title }}
-      </NuxtLink>
-    </h1>
-    <p>{{ topicEntry.sys.createdAt }}</p>
+    <h1>{{ categoryTitle }} の記事</h1>
+    <p>{{ entryCount }}件の記事があります</p>
     <ul>
       <li v-for="entry in entries.items">
         <NuxtLink :to="`/article/${entry.sys.id}`">

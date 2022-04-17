@@ -19,4 +19,10 @@ export default defineNuxtConfig({
       TEAM_STATEMENT: "ランナーが諦めなくていい世界をつくる",
     },
   },
+  head: {
+    titleTemplate: "%s | LongRun Engineering",
+    htmlAttrs: {
+      lang: "ja",
+    },
+  },
 });

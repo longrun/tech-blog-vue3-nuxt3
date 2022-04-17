@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import contentful from "contentful";
-import { inject } from "vue";
 
 interface Props {
   articleId: string;
@@ -15,6 +14,10 @@ const client = contentful.createClient({
 
 const entry = await client.getEntry(props.articleId);
 const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody);
+
+useHead({
+  title: entry.fields.title,
+});
 </script>
 <template>
   <main>

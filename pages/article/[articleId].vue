@@ -1,7 +1,5 @@
-<template>
-  <Header />
-  <Categories />
-  <Related />
-  <Entry :articleId="$route.params.articleId" />
-  <Footer />
-</template>
+<script lang="ts" setup>
+definePageMeta({
+  layout: "article",
+});
+</script>
