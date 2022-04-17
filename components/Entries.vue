@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import contentful from "contentful";
 
-const config = useRuntimeConfig();
+const config = useRuntimeConfig().private;
 
 const client = contentful.createClient({
   space: config.CONTENTFUL_SPACE_ID,

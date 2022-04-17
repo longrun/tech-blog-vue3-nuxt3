@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import contentful from "contentful";
-import md from "markdown-it";
+import { inject } from "vue";
 
 interface Props {
   articleId: string;
 }
 const props = defineProps<Props>();
 
-const config = useRuntimeConfig();
+const config = useRuntimeConfig().private;
 const client = contentful.createClient({
   space: config.CONTENTFUL_SPACE_ID,
   accessToken: config.CONTENTFUL_ACCESS_TOKEN,

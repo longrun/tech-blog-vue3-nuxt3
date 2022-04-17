@@ -1,14 +1,13 @@
-<script lang="ts" setup></script>
 <template>
   <footer>
-    <p>ランナーが諦めなくていい世界をつくる</p>
-    <p>&copy; LongRun Inc.</p>
+    <p>{{ $config.TEAM_STATEMENT }}</p>
     <p>
+      &copy;
       <a
-        href="https://longmayyou.run/"
+        :href="$config.TEAM_WEBSITE_URL"
         rel="noopener noreferrer"
         target="_blank"
-        >LongRun Corporate Site</a
+        >{{ $config.TEAM_NAME }}</a
       >
     </p>
   </footer>
