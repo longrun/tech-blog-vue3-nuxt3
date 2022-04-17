@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   css: ["primeflex/primeflex.min.css", "primeflex/themes/saga-blue.css"],
   publicRuntimeConfig: {
-    SITE_TITLE: "LongRun Blog",
+    GITHUB_ORGANIZATION_URL: "https://github.com/longrun",
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
   },
