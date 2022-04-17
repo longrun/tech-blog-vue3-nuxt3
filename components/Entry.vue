@@ -20,7 +20,7 @@ useHead({
 });
 </script>
 <template>
-  <main>
+  <main class="mt-2 px-6">
     <img
       :src="entry.fields.coverArt.fields.file.url"
       alt="entry.fields.coverArt.fields.title"

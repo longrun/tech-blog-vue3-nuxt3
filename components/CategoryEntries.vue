@@ -22,7 +22,7 @@ useHead({
 });
 </script>
 <template>
-  <main>
+  <main class="ma-0 px-6">
     <h1>{{ categoryTitle }} の記事</h1>
     <p>{{ entryCount }}件の記事があります</p>
     <ul>

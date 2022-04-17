@@ -8,6 +8,7 @@
 - Yarn 3
   - use .yarn/cache
 - [Primeflex](https://www.primefaces.org/primeflex/)
+- [Primeicons](https://github.com/primefaces/primeicons)
 
 # Init
 

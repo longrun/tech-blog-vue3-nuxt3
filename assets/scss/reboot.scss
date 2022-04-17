@@ -9,6 +9,15 @@ html {
 }
 body {
     margin: 0;
-    padding: 24px;
     background-color: var(--surface-ground);
+}
+a, a:link, a:visited, a:hover {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: var(--blue-500);
+}
+
+a:hover {
+    color: var(--blue-400);   
 }

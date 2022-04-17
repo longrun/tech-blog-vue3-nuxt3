@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
-  layout: "article",
+  layout: "default",
 });
 </script>
+<template>
+  <Entry :articleId="$route.params.articleId" />
+</template>

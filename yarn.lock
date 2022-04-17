@@ -5869,6 +5869,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"primeicons@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "primeicons@npm:5.0.0"
+  checksum: f391179f0c774064af417c0d4dbee4c37c714165632f23a2b93083322e4362ef9b1978d3c9aa09ed4ef0187c70dc5501a208b7f40c64c1e88a89462801b7e8c0
+  languageName: node
+  linkType: hard
+
 "process-nextick-args@npm:~2.0.0":
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1"
@@ -6247,6 +6254,7 @@ __metadata:
     markdown-it-sup: ^1.0.0
     nuxt3: ^3.0.0-27499173.3e7d6da
     primeflex: ^3.1.3
+    primeicons: ^5.0.0
     sass: ^1.50.0
   languageName: unknown
   linkType: soft

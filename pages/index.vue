@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
-  layout: "home",
+  layout: "default",
 });
 </script>
+<template>
+  <FeatureEntries />
+</template>

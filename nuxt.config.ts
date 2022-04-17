@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   css: [
     "primeflex/primeflex.min.css",
     "primeflex/themes/saga-blue.css",
+    "primeicons/primeicons.css",
     "assets/scss/reboot.scss",
   ],
   runtimeConfig: {
@@ -26,13 +27,5 @@ export default defineNuxtConfig({
   head: {
     viewport: "width=device-width, initial-scale=1, maximum-scale=1",
     charset: "utf-8",
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "apple-touch-icon",
-        type: "image/png",
-        href: "/apple-touch-icon.png",
-      },
-    ],
   },
 });
