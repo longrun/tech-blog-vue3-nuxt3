@@ -4,5 +4,5 @@ definePageMeta({
 });
 </script>
 <template>
-  <FeatureEntries />
+  <FeaturedArticles />
 </template>

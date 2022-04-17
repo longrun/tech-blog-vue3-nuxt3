@@ -4,5 +4,5 @@ definePageMeta({
 });
 </script>
 <template>
-  <CategoryEntries :categoryId="$route.params.categoryId" />
+  <CategoryArticles :categoryId="$route.params.categoryId" />
 </template>

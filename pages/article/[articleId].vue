@@ -4,5 +4,5 @@ definePageMeta({
 });
 </script>
 <template>
-  <Entry :articleId="$route.params.articleId" />
+  <Article :articleId="$route.params.articleId" />
 </template>

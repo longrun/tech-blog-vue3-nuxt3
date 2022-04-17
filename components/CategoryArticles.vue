@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import contentful from "contentful";
 import upperFirst from "lodash.upperFirst";
 import camelCase from "lodash.camelCase";
 
