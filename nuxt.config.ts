@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  css: ["primeflex/primeflex.css"],
+  css: ["primeflex/primeflex.min.css", "primeflex/themes/saga-blue.css"],
   publicRuntimeConfig: {
     SITE_TITLE: "LongRun Blog",
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,

@@ -1,7 +1,6 @@
 <template>
   <Header />
   <Categories />
-  <Entries />
-  <Featured />
+  <Entry :articleId="$route.params.articleId" />
   <Footer />
 </template>
