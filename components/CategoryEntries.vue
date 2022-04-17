@@ -8,17 +8,12 @@ interface Props {
 }
 const props = defineProps<Props>();
 
-const config = useRuntimeConfig().private;
-
-const client = contentful.createClient({
-  space: config.CONTENTFUL_SPACE_ID,
-  accessToken: config.CONTENTFUL_ACCESS_TOKEN,
-});
-const entries = await client.getEntries({ order: "sys.createdAt" });
+const { $contentfulClient } = useNuxtApp();
+const entries = await $contentfulClient.getEntries({ order: "sys.createdAt" });
 const categoryTitle = upperFirst(camelCase(props.categoryId));
 const entryCount = entries.items.length;
 useHead({
-  title: `${categoryTitle} に関する${entryCount}件の記事`,
+  title: `${categoryTitle} の記事`,
 });
 </script>
 <template>

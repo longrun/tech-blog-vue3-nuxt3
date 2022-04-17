@@ -1,15 +1,9 @@
 <script lang="ts" setup>
-import contentful from "contentful";
-
-const config = useRuntimeConfig();
-
-const client = contentful.createClient({
-  space: config.private.CONTENTFUL_SPACE_ID,
-  accessToken: config.private.CONTENTFUL_ACCESS_TOKEN,
-});
-const entries = await client.getEntries({ order: "sys.createdAt" });
+const { $contentfulClient } = useNuxtApp();
+const entries = await $contentfulClient.getEntries({ order: "sys.createdAt" });
 const topicEntry = entries.items.shift();
 
+const config = useRuntimeConfig();
 useHead({
   title: config.public.TEAM_STATEMENT,
 });
