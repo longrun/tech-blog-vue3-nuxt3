@@ -5,7 +5,11 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  css: ["primeflex/primeflex.min.css", "primeflex/themes/saga-blue.css"],
+  css: [
+    "primeflex/primeflex.min.css",
+    "primeflex/themes/saga-blue.css",
+    "assets/scss/reboot.scss",
+  ],
   runtimeConfig: {
     private: {
       CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
@@ -20,9 +24,15 @@ export default defineNuxtConfig({
     },
   },
   head: {
-    titleTemplate: "%s | LongRun Engineering",
-    htmlAttrs: {
-      lang: "ja",
-    },
+    viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+    charset: "utf-8",
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "apple-touch-icon",
+        type: "image/png",
+        href: "/apple-touch-icon.png",
+      },
+    ],
   },
 });

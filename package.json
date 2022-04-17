@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "contentful": "^9.1.22",
-    "nuxt3": "^3.0.0-27499173.3e7d6da"
+    "nuxt3": "^3.0.0-27499173.3e7d6da",
+    "sass": "^1.50.0"
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^2.0.0",

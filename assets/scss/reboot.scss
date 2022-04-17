@@ -1,0 +1,14 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+html {
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--surface-800);
+}
+body {
+    margin: 0;
+    padding: 24px;
+    background-color: var(--surface-ground);
+}
