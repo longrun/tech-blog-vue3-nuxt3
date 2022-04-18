@@ -15,7 +15,7 @@ useHead({
 </script>
 
 <template>
-  <main class="ma-0 py-6 px-6">
+  <main class="m-0 py-6 px-6">
     <img
       :src="topicEntry.fields.coverArt.fields.file.url"
       alt="topicEntry.fields.coverArt.fields.title"

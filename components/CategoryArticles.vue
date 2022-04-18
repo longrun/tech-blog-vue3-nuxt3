@@ -25,7 +25,7 @@ useHead({
 </script>
 
 <template>
-  <main class="mt-5 mx-0 px-6">
+  <main class="m-0 py-6 px-6">
     <h1>{{ categoryTitle }} の記事</h1>
     <p v-if="entryCount > 0">{{ entryCount }}件の記事があります。</p>
     <p v-else>...はまだありません。</p>
@@ -44,3 +44,9 @@ useHead({
     </div>
   </main>
 </template>
+
+<style scoped lang="scss">
+main {
+  background-color: var(--surface-0);
+}
+</style>

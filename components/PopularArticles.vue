@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <h2>Popular Articles</h2>
+  <div class="px-4">
+    <h2 class="my-0">Popular Articles</h2>
     <ul>
       <li>ここに記事リスト</li>
     </ul>

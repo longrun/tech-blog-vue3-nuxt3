@@ -29,7 +29,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <main class="mt-2 px-6">
+    <main class="m-0 py-6 px-6">
       <img
         :src="entry.fields.coverArt.fields.file.url"
         alt="entry.fields.coverArt.fields.title"
@@ -58,6 +58,10 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+main {
+  background-color: var(--surface-0);
+}
+
 .article-body {
   img {
     max-width: 100%;
