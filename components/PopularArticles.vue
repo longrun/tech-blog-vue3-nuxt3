@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <input type="text" />
+  <div class="">
     <h2>Popular Articles</h2>
     <ul>
       <li>ここに記事リスト</li>

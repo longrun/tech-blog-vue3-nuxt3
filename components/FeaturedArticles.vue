@@ -2,7 +2,10 @@
 import upperFirst from "lodash.upperFirst";
 
 const { $contentfulClient } = useNuxtApp();
-const entries = await $contentfulClient.getEntries({ order: "sys.createdAt" });
+const entries = await $contentfulClient.getEntries({
+  order: "sys.createdAt",
+  limit: 10,
+});
 const topicEntry = entries.items.shift();
 
 const config = useRuntimeConfig();
@@ -10,6 +13,7 @@ useHead({
   title: config.public.TEAM_STATEMENT,
 });
 </script>
+
 <template>
   <main class="ma-0 py-6 px-6">
     <img
@@ -22,18 +26,10 @@ useHead({
         {{ topicEntry.fields.title }}
       </a>
     </h1>
-    <div class="border-round surface-200 py-1 px-3 w-min">
-      {{ upperFirst(topicEntry.metadata.tags[0].sys.id) }}
-    </div>
-    <div>at {{ topicEntry.sys.createdAt }}</div>
-    <div>
-      by y-takebe
-      <img
-        class="border-circle"
-        style="width: 36px; height: 36px"
-        src="//longmayyou.run/images/team/yuichi-takebe.jpg"
-      />
-    </div>
+    <ArticleMeta
+      :created-at="topicEntry.sys.createdAt"
+      :category="topicEntry.metadata.tags[0].sys.id"
+    />
     <div class="grid mt-6">
       <div v-for="entry in entries.items" class="col-6">
         <img
@@ -47,24 +43,16 @@ useHead({
             {{ entry.fields.title }}
           </a>
         </h2>
-        <div class="border-round surface-200 py-1 px-3 w-min">
-          {{ upperFirst(entry.metadata.tags[0].sys.id) }}
-        </div>
-
-        <div>at {{ entry.sys.createdAt }}</div>
-        <div>
-          by y-takebe
-          <img
-            class="border-circle"
-            style="width: 36px; height: 36px"
-            src="//longmayyou.run/images/team/yuichi-takebe.jpg"
-          />
-        </div>
+        <ArticleMeta
+          :created-at="entry.sys.createdAt"
+          :category="entry.metadata.tags[0].sys.id"
+        />
       </div>
     </div>
   </main>
 </template>
-<style scoped>
+
+<style scoped lang="scss">
 main {
   background-color: var(--surface-0);
 }

@@ -13,6 +13,7 @@
     </nav>
   </header>
 </template>
+
 <style scoped lang="scss">
 header {
   margin: 0;
@@ -21,6 +22,7 @@ header {
 }
 .header__sitetitle {
   color: var(--text-color);
+
   a {
     color: var(--text-color);
   }
@@ -29,6 +31,7 @@ header {
 nav {
   top: 48px;
   right: 48px;
+
   a {
     color: var(--text-color);
   }

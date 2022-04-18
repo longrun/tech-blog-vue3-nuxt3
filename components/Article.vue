@@ -13,6 +13,7 @@ const { $contentfulClient } = useNuxtApp();
 const entries = await $contentfulClient.getEntries({
   content_type: config.private.CONTENTFUL_CONTENT_KEY,
   "fields.slug[in]": props.articleId,
+  limit: 1,
 });
 const entry = entries.items.shift();
 const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody);
@@ -25,6 +26,7 @@ onMounted(() => {
   Prism.highlightAll();
 });
 </script>
+
 <template>
   <div>
     <main class="mt-2 px-6">
@@ -36,19 +38,11 @@ onMounted(() => {
       <h1 class="text-4xl">
         {{ entry.fields.title }}
       </h1>
-      <div class="border-round surface-200 py-1 px-3 w-min">
-        {{ upperFirst(entry.metadata.tags[0].sys.id) }}
-      </div>
 
-      <div>at {{ entry.sys.createdAt }}</div>
-      <div>
-        by y-takebe
-        <img
-          class="border-circle"
-          style="width: 36px; height: 36px"
-          src="//longmayyou.run/images/team/yuichi-takebe.jpg"
-        />
-      </div>
+      <ArticleMeta
+        :created-at="entry.sys.createdAt"
+        :category="entry.metadata.tags[0].sys.id"
+      />
 
       <ShareTo />
 
@@ -57,17 +51,19 @@ onMounted(() => {
       <ShareTo />
     </main>
 
-    <section>
+    <section class="hidden">
       <h2>次に読もう</h2>
     </section>
   </div>
 </template>
-<style lang="scss">
+
+<style scoped lang="scss">
 .article-body {
   img {
     max-width: 100%;
     width: 100%;
   }
+
   blockquote {
     border-left: 5px solid #ddd;
     padding: 0.5em;
