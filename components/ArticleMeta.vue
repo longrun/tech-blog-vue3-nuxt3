@@ -16,12 +16,14 @@ const author = props.author || "y-takebe";
 const avatarSize = props.avatarSize || "36px";
 const avatarImageURL =
   props.avatarImageURL || "//longmayyou.run/images/team/yuichi-takebe.jpg";
-const categoryTitle = upperFirst(camelCase(props.category));
+const categoryTitle = props.category
+  ? upperFirst(camelCase(props.category))
+  : null;
 const createdAt = useLocaleDate(new Date(props.createdAt));
 </script>
 
 <template>
-  <div class="card">
+  <aside class="card">
     <div
       class="flex align-content-center card-container"
       :style="`height:${avatarSize}`"
@@ -36,10 +38,13 @@ const createdAt = useLocaleDate(new Date(props.createdAt));
         <span class="text-400"> &bull; </span>
         <time datetime="props.createdAt">{{ createdAt }}</time>
 
-        <span class="border-round surface-200 py-1 px-2 w-min ml-2">
+        <span
+          v-if="categoryTitle"
+          class="border-round surface-200 py-1 px-2 w-min ml-2"
+        >
           {{ categoryTitle }}
         </span>
       </div>
     </div>
-  </div>
+  </aside>
 </template>

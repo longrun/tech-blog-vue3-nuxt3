@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import upperFirst from "lodash.upperFirst";
 import Prism from "prismjs";
 
 interface Props {
@@ -29,26 +28,30 @@ onMounted(() => {
 
 <template>
   <div>
-    <main class="m-0 py-6 px-6">
-      <img
-        :src="entry.fields.coverArt.fields.file.url"
-        alt="entry.fields.coverArt.fields.title"
-        class="w-full border-round"
-      />
-      <h1 class="text-4xl">
-        {{ entry.fields.title }}
-      </h1>
-
-      <ArticleMeta
-        :created-at="entry.sys.createdAt"
-        :category="entry.metadata.tags[0].sys.id"
-      />
-
-      <ShareTo />
-
-      <div class="article-body" v-html="entryHTML"></div>
-
-      <ShareTo />
+    <main class="article__main m-0 py-6 px-6">
+      <header>
+        <img
+          :src="entry.fields.coverArt.fields.file.url"
+          alt="entry.fields.coverArt.fields.title"
+          class="w-full border-round"
+        />
+        <h1 class="text-4xl">
+          {{ entry.fields.title }}
+        </h1>
+        <ArticleMeta
+          :created-at="entry.sys.createdAt"
+          :category="entry.metadata.tags[0].sys.id"
+        />
+      </header>
+      <aside>
+        <ShareTo />
+      </aside>
+      <section>
+        <article class="article__body" v-html="entryHTML"></article>
+      </section>
+      <aside>
+        <ShareTo />
+      </aside>
     </main>
 
     <section class="hidden">
@@ -57,12 +60,24 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped lang="scss">
-main {
+<style lang="scss">
+.article__main {
   background-color: var(--surface-0);
+
+  header {
+    margin-bottom: 3rem;
+  }
 }
 
-.article-body {
+.article__body {
+  h2 {
+    margin: 1.5rem 0;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: var(--bluegray-100);
+    font-size: 1.75rem;
+  }
+
   img {
     max-width: 100%;
     width: 100%;

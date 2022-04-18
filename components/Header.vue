@@ -1,5 +1,5 @@
 <template>
-  <header class="">
+  <header>
     <p class="header__sitetitle text-4xl font-light">
       <a href="/">{{ $config.BLOG_SITE_TITLE }}</a>
     </p>

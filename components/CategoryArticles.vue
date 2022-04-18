@@ -13,7 +13,7 @@ const { $contentfulClient } = useNuxtApp();
 const entries = await $contentfulClient.getEntries({
   content_type: config.private.CONTENTFUL_CONTENT_KEY,
   "metadata.tags.sys.id[all]": props.categoryId,
-  order: "sys.createdAt",
+  order: "-sys.createdAt",
   limit: 10,
 });
 
@@ -29,19 +29,26 @@ useHead({
     <h1>{{ categoryTitle }} の記事</h1>
     <p v-if="entryCount > 0">{{ entryCount }}件の記事があります。</p>
     <p v-else>...はまだありません。</p>
-    <div class="grid">
-      <div v-for="entry in entries.items" class="col-6">
-        <h2>
-          <a href="`/article/${entry.fields.slug}`">
-            {{ entry.fields.title }}
-          </a>
-        </h2>
-        <ArticleMeta
-          :created-at="entry.sys.createdAt"
-          :category="entry.metadata.tags[0].sys.id"
-        />
+
+    <article v-for="entry in entries.items">
+      <div class="grid">
+        <div class="col-6">
+          <img
+            :src="entry.fields.coverArt.fields.file.url"
+            alt="entry.fields.coverArt.fields.title"
+            class="w-full border-round"
+          />
+        </div>
+        <div class="col-6">
+          <h2>
+            <NuxtLink :to="`/article/${entry.fields.slug}`">
+              {{ entry.fields.title }}
+            </NuxtLink>
+          </h2>
+          <ArticleMeta :created-at="entry.sys.createdAt" />
+        </div>
       </div>
-    </div>
+    </article>
   </main>
 </template>
 

@@ -5946,6 +5946,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prism-themes@npm:^1.9.0":
+  version: 1.9.0
+  resolution: "prism-themes@npm:1.9.0"
+  checksum: ddbadb8d83fc23e428409d7dd1d62dde6033a3afabd721d292e2d251f5693e3eccb7f9641704374f3df3dde59c0e2c8a3c069a7aa72990c4a00acb57f2af81f8
+  languageName: node
+  linkType: hard
+
 "prismjs@npm:^1.28.0":
   version: 1.28.0
   resolution: "prismjs@npm:1.28.0"
@@ -6332,6 +6339,7 @@ __metadata:
     nuxt3: ^3.0.0-27499173.3e7d6da
     primeflex: ^3.1.3
     primeicons: ^5.0.0
+    prism-themes: ^1.9.0
     prismjs: ^1.28.0
     sass: ^1.50.0
     vue-i18n: ^9.1.9

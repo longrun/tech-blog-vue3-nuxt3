@@ -3,7 +3,7 @@ import upperFirst from "lodash.upperFirst";
 
 const { $contentfulClient } = useNuxtApp();
 const entries = await $contentfulClient.getEntries({
-  order: "sys.createdAt",
+  order: "-sys.createdAt",
   limit: 10,
 });
 const topicEntry = entries.items.shift();
@@ -16,38 +16,41 @@ useHead({
 
 <template>
   <main class="m-0 py-6 px-6">
-    <img
-      :src="topicEntry.fields.coverArt.fields.file.url"
-      alt="topicEntry.fields.coverArt.fields.title"
-      class="w-full border-round"
-    />
-    <h1 class="text-4xl">
-      <a :href="`/article/${topicEntry.fields.slug}`">
-        {{ topicEntry.fields.title }}
-      </a>
-    </h1>
-    <ArticleMeta
-      :created-at="topicEntry.sys.createdAt"
-      :category="topicEntry.metadata.tags[0].sys.id"
-    />
+    <article>
+      <img
+        :src="topicEntry.fields.coverArt.fields.file.url"
+        alt="topicEntry.fields.coverArt.fields.title"
+        class="w-full border-round"
+      />
+
+      <h1 class="text-4xl">
+        <NuxtLink :to="`/article/${topicEntry.fields.slug}`">
+          {{ topicEntry.fields.title }}
+        </NuxtLink>
+      </h1>
+      <ArticleMeta
+        :created-at="topicEntry.sys.createdAt"
+        :category="topicEntry.metadata.tags[0].sys.id"
+      />
+    </article>
+
     <div class="grid mt-6">
-      <div v-for="entry in entries.items" class="col-6">
+      <article v-for="entry in entries.items" class="col-6">
         <img
           :src="entry.fields.coverArt.fields.file.url"
           alt="entry.fields.coverArt.fields.title"
           class="w-full border-round"
         />
-
         <h2>
-          <a :href="`/article/${entry.fields.slug}`">
+          <NuxtLink :to="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}
-          </a>
+          </NuxtLink>
         </h2>
         <ArticleMeta
           :created-at="entry.sys.createdAt"
           :category="entry.metadata.tags[0].sys.id"
         />
-      </div>
+      </article>
     </div>
   </main>
 </template>

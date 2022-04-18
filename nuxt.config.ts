@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "primeflex/primeflex.min.css",
     "primeflex/themes/saga-blue.css",
     "primeicons/primeicons.css",
-    "prismjs/themes/prism-tomorrow.min.css",
+    "prism-themes/themes/prism-vsc-dark-plus.min.css",
     "assets/scss/team-them.scss",
     "assets/scss/reboot.scss",
   ],
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     },
   },
   head: {
-    viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+    viewport: "width=device-width, initial-scale=1",
     charset: "utf-8",
   },
 });

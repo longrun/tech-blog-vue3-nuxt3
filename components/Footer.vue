@@ -6,14 +6,14 @@ import { version } from "../package.json";
   <footer class="text-center py-8">
     <div>{{ $config.TEAM_STATEMENT }}</div>
     <div class="my-3">
+      &copy;
+      {{ new Date().getFullYear() }}
       <a
         :href="$config.TEAM_WEBSITE_URL"
         rel="noopener noreferrer"
         target="_blank"
         >{{ $config.TEAM_NAME }}</a
       >
-      &copy;
-      {{ new Date().getFullYear() }}
     </div>
     <div class="version text-sm text-500">
       <a href="{{$config.APP_URL}}" target="_blank">{{ $config.APP_NAME }}</a>
