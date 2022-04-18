@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import upperFirst from "lodash.upperFirst";
+import Prism from "prismjs";
+
 interface Props {
   articleId: string;
 }
@@ -17,6 +20,10 @@ const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody);
 useHead({
   title: entry.fields.title,
 });
+
+onMounted(() => {
+  Prism.highlightAll();
+});
 </script>
 <template>
   <div>
@@ -24,16 +31,28 @@ useHead({
       <img
         :src="entry.fields.coverArt.fields.file.url"
         alt="entry.fields.coverArt.fields.title"
-        class="w-full"
+        class="w-full border-round"
       />
       <h1 class="text-4xl">
         {{ entry.fields.title }}
       </h1>
-      <p>{{ entry.sys.createdAt }}</p>
+      <div class="border-round surface-200 py-1 px-3 w-min">
+        {{ upperFirst(entry.metadata.tags[0].sys.id) }}
+      </div>
+
+      <div>at {{ entry.sys.createdAt }}</div>
+      <div>
+        by y-takebe
+        <img
+          class="border-circle"
+          style="width: 36px; height: 36px"
+          src="//longmayyou.run/images/team/yuichi-takebe.jpg"
+        />
+      </div>
 
       <ShareTo />
 
-      <div v-html="entryHTML"></div>
+      <div class="article-body" v-html="entryHTML"></div>
 
       <ShareTo />
     </main>
@@ -43,3 +62,17 @@ useHead({
     </section>
   </div>
 </template>
+<style lang="scss">
+.article-body {
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+  blockquote {
+    border-left: 5px solid #ddd;
+    padding: 0.5em;
+    margin-left: 1em;
+    margin-right: 0;
+  }
+}
+</style>

@@ -5876,6 +5876,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prismjs@npm:^1.28.0":
+  version: 1.28.0
+  resolution: "prismjs@npm:1.28.0"
+  checksum: bde93fb2beb45b7243219fc53855f59ee54b3fa179f315e8f9d66244d756ef984462e10561bbdc6713d3d7e051852472d7c284f5794a8791eeaefea2fb910b16
+  languageName: node
+  linkType: hard
+
 "process-nextick-args@npm:~2.0.0":
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1"
@@ -6255,6 +6262,7 @@ __metadata:
     nuxt3: ^3.0.0-27499173.3e7d6da
     primeflex: ^3.1.3
     primeicons: ^5.0.0
+    prismjs: ^1.28.0
     sass: ^1.50.0
   languageName: unknown
   linkType: soft

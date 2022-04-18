@@ -3,10 +3,9 @@
 - Vue3
 - Nuxt3
 - Vite
-- Volar
 - TypeScript
 - Yarn 3
-  - use .yarn/cache
+- Volar
 - [Primeflex](https://www.primefaces.org/primeflex/)
 - [Primeicons](https://github.com/primefaces/primeicons)
 
@@ -21,16 +20,19 @@
 Put `.env` file on project root and include Contentful Identify and Token.
 
 ```
+CONTENTFUL_CONTENT_KEY=<your contentful content id>
 CONTENTFUL_SPACE_ID=<your contentful space id>
 CONTENTFUL_ACCESS_TOKEN=<your contentful access token>
 ```
 
-Write site title on `nuxt.config.ts`.
+Write site title, team name, ... on `nuxt.config.ts`.
 
 ```
-  publicRuntimeConfig: {
-    SITE_TITLE: "YOUR BLOG SITE TITLE",
-    ...
+  runtimeConfig: {
+    public: {
+      BLOG_SITE_TITLE: "YOUR BLOG SITE TITLE",
+      ...
+    }
   },
 ```
 
@@ -49,5 +51,4 @@ yarn start
 
 # LICENSE
 
-- MIT
-- see [LICENSE](./LICENSE)
+- [MIT LICENSE](./LICENSE)

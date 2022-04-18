@@ -26,9 +26,9 @@ const navLinks = [
   font-size: 1.2rem;
 }
 .nav__categories a {
-  color: var(--surface-700);
+  color: var(--text-color);
 }
 .nav__categories a:hover {
-  color: var(--surface-600);
+  color: var(--text-color);
 }
 </style>

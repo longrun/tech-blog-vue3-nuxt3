@@ -13,23 +13,24 @@
     </nav>
   </header>
 </template>
-<style scoped>
+<style scoped lang="scss">
 header {
   margin: 0;
   padding: 12px 0 0 64px;
   height: 128px;
 }
 .header__sitetitle {
-  color: var(--surface-800);
-}
-a,
-a:link,
-a:visited {
-  color: var(--surface-800);
+  color: var(--text-color);
+  a {
+    color: var(--text-color);
+  }
 }
 
-header nav {
+nav {
   top: 48px;
   right: 48px;
+  a {
+    color: var(--text-color);
+  }
 }
 </style>

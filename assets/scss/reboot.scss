@@ -1,11 +1,11 @@
 html, body {
     width: 100%;
     height: 100%;
+    color: var(--text-color);
 }
 html {
     font-family: var(--font-family);
     font-size: 16px;
-    color: var(--surface-800);
 }
 body {
     margin: 0;
@@ -15,9 +15,8 @@ a, a:link, a:visited, a:hover {
     text-decoration: none;
 }
 a:link, a:visited {
-    color: var(--blue-500);
+    color: var(--primary-color);
 }
-
 a:hover {
-    color: var(--blue-400);   
+    opacity: 0.87;
 }
