@@ -15,9 +15,7 @@ const navLinks = [
         v-for="navLink in navLinks"
         class="flex-initial flex align-items-center justify-content-center text-white border-round px-3 py-2 mr-2"
       >
-        <NuxtLink :to="`/category/${navLink.tagid}`">{{
-          navLink.title
-        }}</NuxtLink>
+        <a :href="`/category/${navLink.tagid}`">{{ navLink.title }}</a>
       </div>
     </div>
   </nav>

@@ -3,19 +3,25 @@ import upperFirst from "lodash.upperFirst";
 import camelCase from "lodash.camelCase";
 
 interface Props {
-  author: string;
-  avatarSize: string;
-  avatarImageURL: string;
+  // author: string;
+  // avatarSize: string;
+  // avatarImageURL: string;
   createdAt: string;
   category: string;
 }
 const props = defineProps<Props>();
 
 // TODO dynamic set up
+/*
 const author = props.author || "y-takebe";
 const avatarSize = props.avatarSize || "36px";
 const avatarImageURL =
   props.avatarImageURL || "//longmayyou.run/images/team/yuichi-takebe.jpg";
+*/
+const author = "y-takebe";
+const avatarSize = "36px";
+const avatarImageURL = "//longmayyou.run/images/team/yuichi-takebe.jpg";
+
 const categoryTitle = props.category
   ? upperFirst(camelCase(props.category))
   : null;

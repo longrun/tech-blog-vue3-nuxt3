@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <SiteHeader />
     <NavBar />
 
     <div class="grid grid-nogutter py-6 mx-auto" style="max-width: 1200px">
@@ -12,6 +12,6 @@
       </aside>
     </div>
 
-    <Footer />
+    <SiteFooter />
   </div>
 </template>
