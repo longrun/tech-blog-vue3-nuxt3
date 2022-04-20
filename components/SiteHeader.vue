@@ -4,10 +4,7 @@
       <a href="/">{{ $config.BLOG_SITE_TITLE }}</a>
     </p>
     <nav class="absolute">
-      <a
-        :href="$config.GITHUB_ORGANIZATION_URL"
-        target="_blank"
-        ref="noopener noreferrer"
+      <a ref="noopener noreferrer" :href="$config.GITHUB_ORGANIZATION_URL" target="_blank"
         ><i class="pi pi-github text-3xl"></i>
       </a>
     </nav>

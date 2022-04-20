@@ -1,29 +1,29 @@
 <script lang="ts" setup>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 
 interface Props {
-  articleId: string;
+  articleId: string
 }
-const props = defineProps<Props>();
+const props = defineProps<Props>()
 
-const config = useRuntimeConfig();
+const config = useRuntimeConfig()
 
-const { $contentfulClient } = useNuxtApp();
+const { $contentfulClient } = useNuxtApp()
 const entries = await $contentfulClient.getEntries({
   content_type: config.private.CONTENTFUL_CONTENT_KEY,
-  "fields.slug[in]": props.articleId,
+  'fields.slug[in]': props.articleId,
   limit: 1,
-});
-const entry = entries.items.shift();
-const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody);
+})
+const entry = entries.items.shift()
+const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody)
 
 useHead({
   title: entry.fields.title,
-});
+})
 
 onMounted(() => {
-  Prism.highlightAll();
-});
+  Prism.highlightAll()
+})
 </script>
 
 <template>
@@ -38,15 +38,13 @@ onMounted(() => {
         <h1 class="text-4xl">
           {{ entry.fields.title }}
         </h1>
-        <ArticleMeta
-          :created-at="entry.sys.createdAt"
-          :category="entry.metadata.tags[0].sys.id"
-        />
+        <ArticleMeta :created-at="entry.sys.createdAt" :category="entry.metadata.tags[0].sys.id" />
       </header>
       <aside>
         <ShareTo />
       </aside>
       <section>
+        <!-- eslint-disable-next-line vue/no-v-html -->
         <article class="article__body" v-html="entryHTML"></article>
       </section>
       <aside>

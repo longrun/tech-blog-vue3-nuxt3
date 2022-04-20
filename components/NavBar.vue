@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-// TODO change dynamic
+// TODO change to dynamic set up
 const navLinks = [
-  { tagid: "development", title: "Development" },
-  { tagid: "operation", title: "Operation" },
-  { tagid: "cafebreak", title: "CafeBreak☕️" },
-  { tagid: "culture", title: "Culture🦄" },
-];
+  { tagid: 'development', title: 'Development' },
+  { tagid: 'operation', title: 'Operation' },
+  { tagid: 'cafebreak', title: 'CafeBreak☕️' },
+  { tagid: 'culture', title: 'Culture🦄' },
+]
 </script>
 
 <template>
@@ -13,6 +13,7 @@ const navLinks = [
     <div class="card-container flex flex-wrap">
       <div
         v-for="navLink in navLinks"
+        :key="navLink.tagid"
         class="flex-initial flex align-items-center justify-content-center text-white border-round px-3 py-2 mr-2"
       >
         <a :href="`/category/${navLink.tagid}`">{{ navLink.title }}</a>

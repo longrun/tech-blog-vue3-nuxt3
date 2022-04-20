@@ -1,0 +1,7 @@
+.prettierrc
+*.yml
+node_modules/
+.nuxt/
+.output/
+.yarn/
+**/*.md

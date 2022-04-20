@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
-  layout: "default",
-});
+  layout: 'with-sidebar',
+})
 </script>
 
 <template>

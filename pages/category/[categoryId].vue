@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
-  layout: "default",
-});
+  layout: 'with-sidebar',
+})
 </script>
 
 <template>
-  <CategoryArticles :categoryId="$route.params.categoryId" />
+  <CategoryArticles :category-id="$route.params.categoryId" />
 </template>

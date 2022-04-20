@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { version } from "../package.json";
+import { version } from '../package.json'
 </script>
 
 <template>
@@ -8,12 +8,7 @@ import { version } from "../package.json";
     <div class="my-3">
       &copy;
       {{ new Date().getFullYear() }}
-      <a
-        :href="$config.TEAM_WEBSITE_URL"
-        rel="noopener noreferrer"
-        target="_blank"
-        >{{ $config.TEAM_NAME }}</a
-      >
+      <a :href="$config.TEAM_WEBSITE_URL" rel="noopener noreferrer" target="_blank">{{ $config.TEAM_NAME }}</a>
     </div>
     <div class="version text-sm text-500">
       <a href="{{$config.APP_URL}}" target="_blank">{{ $config.APP_NAME }}</a>

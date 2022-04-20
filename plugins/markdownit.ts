@@ -1,23 +1,23 @@
-import { defineNuxtPlugin } from "#app";
+import { defineNuxtPlugin } from '#app'
 
-import mdit from "markdown-it";
+import mdit from 'markdown-it'
 
-import sub from "markdown-it-sub";
-import sup from "markdown-it-sup";
-import fn from "markdown-it-footnote";
-import emo from "markdown-it-emoji";
-import def from "markdown-it-deflist";
-import ins from "markdown-it-ins";
-import container from "markdown-it-container";
+import sub from 'markdown-it-sub'
+import sup from 'markdown-it-sup'
+import fn from 'markdown-it-footnote'
+import emo from 'markdown-it-emoji'
+import def from 'markdown-it-deflist'
+import ins from 'markdown-it-ins'
+import container from 'markdown-it-container'
 
 const markdownit = new mdit({
   html: true,
   xhtmlOut: false,
   breaks: false,
-  langPrefix: "language-",
+  langPrefix: 'language-',
   linkify: true,
   typographer: true,
-  quotes: "“”‘’",
+  quotes: '“”‘’',
 })
   .use(sub)
   .use(sup)
@@ -25,10 +25,10 @@ const markdownit = new mdit({
   .use(emo)
   .use(def)
   .use(ins)
-  .use(container, "codeblock", { marker: "@" });
+  .use(container, 'codeblock', { marker: '@' })
 
-markdownit.linkify.set({ fuzzyEmail: false });
+markdownit.linkify.set({ fuzzyEmail: false })
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.provide("mdit", markdownit);
-});
+  nuxtApp.provide('mdit', markdownit)
+})

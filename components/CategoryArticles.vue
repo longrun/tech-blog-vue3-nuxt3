@@ -1,27 +1,27 @@
 <script lang="ts" setup>
-import upperFirst from "lodash.upperFirst";
-import camelCase from "lodash.camelCase";
+import upperFirst from 'lodash.upperFirst'
+import camelCase from 'lodash.camelCase'
 
 interface Props {
-  categoryId: string;
+  categoryId: string
 }
-const props = defineProps<Props>();
+const props = defineProps<Props>()
 
-const config = useRuntimeConfig();
+const config = useRuntimeConfig()
 
-const { $contentfulClient } = useNuxtApp();
+const { $contentfulClient } = useNuxtApp()
 const entries = await $contentfulClient.getEntries({
   content_type: config.private.CONTENTFUL_CONTENT_KEY,
-  "metadata.tags.sys.id[all]": props.categoryId,
-  order: "-sys.createdAt",
+  'metadata.tags.sys.id[all]': props.categoryId,
+  order: '-sys.createdAt',
   limit: 10,
-});
+})
 
-const categoryTitle = upperFirst(camelCase(props.categoryId));
-const entryCount = entries.items.length;
+const categoryTitle = upperFirst(camelCase(props.categoryId))
+const entryCount = entries.items.length
 useHead({
   title: `${categoryTitle} の記事`,
-});
+})
 </script>
 
 <template>
@@ -30,7 +30,7 @@ useHead({
     <p v-if="entryCount > 0">{{ entryCount }}件の記事があります。</p>
     <p v-else>...はまだありません。</p>
 
-    <article v-for="entry in entries.items">
+    <article v-for="entry in entries.items" :key="entry.sys.id">
       <div class="grid">
         <div class="col-6">
           <img

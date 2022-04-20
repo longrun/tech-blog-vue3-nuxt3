@@ -1,0 +1,7 @@
+.eslintrc.js
+node_modules/
+.nuxt/
+.output/
+.yarn/
+assets/
+public/
