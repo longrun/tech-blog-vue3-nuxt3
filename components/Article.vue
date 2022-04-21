@@ -65,28 +65,28 @@ onMounted(() => {
   header {
     margin-bottom: 3rem;
   }
+}
 
-  .article__body {
-    h2 {
-      margin: 1.5rem 0;
-      border-style: solid;
-      border-width: 0 0 1px 0;
-      border-color: var(--bluegray-100);
-      font-size: 1.75rem;
-    }
+.article__body {
+  h2 {
+    margin: 1.5rem 0;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: var(--bluegray-100);
+    font-size: 1.75rem;
+  }
 
-    img {
-      max-width: 100%;
-      width: 100%;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.12);
-    }
+  img {
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.12);
+  }
 
-    blockquote {
-      border-left: 5px solid #ddd;
-      padding: 0.5em;
-      margin-left: 1em;
-      margin-right: 0;
-    }
+  blockquote {
+    border-left: 5px solid #ddd;
+    padding: 0.5em;
+    margin-left: 1em;
+    margin-right: 0;
   }
 }
 </style>
