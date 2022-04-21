@@ -2,9 +2,10 @@
   "version": "0.0.1-alpha.0",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "node .output/server/index.mjs",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preveiw": "nuxt preview",
     "lint": "eslint --no-fix --ext .js,.ts,.vue .",
     "prettier": "prettier --check '**/*.{js,ts,vue}'"
   },
@@ -12,17 +13,17 @@
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "@vue/eslint-config-typescript": "^10.0.0",
-    "contentful": "^9.1.22",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^8.6.0",
-    "nuxt3": "^3.0.0-rc.0-27507774.4c19b26",
+    "nuxt": "3.0.0-rc.1",
     "prettier": "^2.6.2",
     "sass": "^1.50.1",
-    "vite-plugin-eslint": "^1.5.0"
+    "vite-plugin-eslint": "^1.5.2"
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^2.0.0",
+    "contentful": "^9.1.24",
     "lodash.camelcase": "^4.3.0",
     "lodash.upperfirst": "^4.3.1",
     "markdown-it": "^12.3.2",
