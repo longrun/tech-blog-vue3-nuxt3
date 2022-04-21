@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="siteheader">
     <p class="header__sitetitle text-4xl font-light">
       <a href="/">{{ $config.BLOG_SITE_TITLE }}</a>
     </p>
@@ -12,25 +12,26 @@
 </template>
 
 <style scoped lang="scss">
-header {
+.siteheader {
   margin: 0;
   padding: 12px 0 0 64px;
   height: 128px;
-}
-.header__sitetitle {
-  color: var(--text-color);
 
-  a {
+  .header__sitetitle {
     color: var(--text-color);
+
+    a {
+      color: var(--text-color);
+    }
   }
-}
 
-nav {
-  top: 48px;
-  right: 48px;
+  nav {
+    top: 48px;
+    right: 48px;
 
-  a {
-    color: var(--text-color);
+    a {
+      color: var(--text-color);
+    }
   }
 }
 </style>

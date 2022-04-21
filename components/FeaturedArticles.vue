@@ -13,7 +13,7 @@ useHead({
 </script>
 
 <template>
-  <main class="m-0 py-6 px-6">
+  <main class="featured-articles m-0 py-6 px-6">
     <article>
       <img
         :src="topicEntry.fields.coverArt.fields.file.url"
@@ -48,7 +48,7 @@ useHead({
 </template>
 
 <style scoped lang="scss">
-main {
+.featured-articles {
   background-color: var(--surface-0);
 }
 </style>
