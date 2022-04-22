@@ -1,5 +1,4 @@
 import type { Ref } from 'vue'
-import type { dateStyle } from 'Intl.DateTimeFormatOptions.dateStyle'
 
 export const useLocale = () => useState<string>('locale', () => useDefaultLocale().value)
 
@@ -33,7 +32,6 @@ export const useLocales = () => {
 // Using Intl.DateTimeFormat for language-sensitive date and time formatting
 // Learn more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 // dateStyle: short, medium, long, full
-export const useLocaleDate = (date: Ref<Date> | Date, locale = useLocale(), dateStyle = 'long') => {
-  const ds: dateStyle = dateStyle
-  return computed(() => new Intl.DateTimeFormat(locale.value, { dateStyle: ds }).format(unref(date)))
+export const useLocaleDate = (date: Ref<Date> | Date, locale = useLocale()) => {
+  return computed(() => new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(unref(date)))
 }

@@ -1,12 +1,16 @@
 <template>
-  <header class="siteheader">
-    <p class="header__sitetitle text-4xl font-light">
-      <a href="/">{{ $config.BLOG_SITE_TITLE }}</a>
+  <header class="siteheader flex align-content-center">
+    <p class="header__sitetitle flex align-items-center justify-content-center ml-2 font-light text-4xl">
+      <a href="/">LongRun Engineering</a>
     </p>
-    <nav class="absolute">
-      <a ref="noopener noreferrer" :href="$config.GITHUB_ORGANIZATION_URL" target="_blank"
-        ><i class="pi pi-github text-3xl"></i>
-      </a>
+
+    <div class="mx-auto" />
+    <nav class="flex align-items-center justify-content-center">
+      <div class="flex align-items-end justify-content-end">
+        <a ref="noopener noreferrer" :href="$config.GITHUB_ORGANIZATION_URL" target="_blank"
+          ><i class="pi pi-github text-3xl"></i>
+        </a>
+      </div>
     </nav>
   </header>
 </template>
@@ -14,8 +18,8 @@
 <style scoped lang="scss">
 .siteheader {
   margin: 0;
-  padding: 12px 0 0 64px;
-  height: 128px;
+  padding: 0 64px;
+  height: 140px;
 
   .header__sitetitle {
     color: var(--text-color);
@@ -26,11 +30,11 @@
   }
 
   nav {
-    top: 48px;
-    right: 48px;
-
     a {
       color: var(--text-color);
+    }
+    a:hover {
+      transform: rotate(-15deg);
     }
   }
 }

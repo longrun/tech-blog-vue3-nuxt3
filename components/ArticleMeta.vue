@@ -35,7 +35,7 @@ const createdAt = useLocaleDate(new Date(props.createdAt))
         <span class="text-400"> &bull; </span>
         <time datetime="props.createdAt">{{ createdAt }}</time>
 
-        <span v-if="categoryTitle" class="border-round surface-200 py-1 px-2 w-min ml-2">
+        <span v-if="categoryTitle" class="border-round-md surface-200 py-1 px-2 w-min ml-2">
           {{ categoryTitle }}
         </span>
       </div>
