@@ -2,7 +2,7 @@
   <div>
     <SiteHeader />
     <NavBar />
-    <div class="grid grid-nogutter mx-auto" style="max-width: 1200px">
+    <div class="grid grid-nogutter mx-auto" style="width: 1200px">
       <div class="col">
         <NuxtPage />
       </div>
@@ -10,7 +10,6 @@
         <PopularArticles />
       </aside>
     </div>
-
     <SiteFooter />
   </div>
 </template>

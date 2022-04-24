@@ -30,7 +30,7 @@ export default defineNuxtConfig({
       DEFAUTL_LANGUAGE: 'ja',
       APP_NAME: 'tech-blog-vue3-nuxt3',
       APP_URL: 'https://github.com/longrun/tech-blog-vue3-nuxt3',
-      BLOG_SITE_TITLE: 'LongRun Engineering',
+      SITE_TITLE: 'LongRun Engineering',
       TEAM_NAME: 'LongRun Inc.',
       TEAM_WEBSITE_URL: 'https://longmayyou.run',
       TEAM_STATEMENT: 'ランナーが諦めなくていい世界をつくる',

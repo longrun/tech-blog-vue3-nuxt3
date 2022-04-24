@@ -26,7 +26,7 @@ useHead({
 
 <template>
   <main class="category-articles m-0 py-6 px-6">
-    <h1>{{ categoryTitle }} の記事</h1>
+    <h1>{{ $tc('category_headline', entryCount, { category: categoryTitle }) }}</h1>
     <p v-if="entryCount > 0">{{ entryCount }}件の記事があります。</p>
     <p v-else>...はまだありません。</p>
 

@@ -33,7 +33,7 @@ onMounted(() => {
       alt="entry.fields.coverArt.fields.title"
       class="w-screen md:w-full border-round"
     />
-    <main class="article__main m-0 py-6 px-4">
+    <main class="article__main m-0 p-4">
       <header>
         <h1 class="text-4xl">
           {{ entry.fields.title }}
@@ -52,8 +52,9 @@ onMounted(() => {
       </aside>
     </main>
 
+    <!-- TODO -->
     <section class="hidden">
-      <h2>次に読もう</h2>
+      <h2>{{ $t('read_next') }}</h2>
     </section>
   </div>
 </template>

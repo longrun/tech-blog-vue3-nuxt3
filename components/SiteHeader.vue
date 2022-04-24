@@ -1,7 +1,7 @@
 <template>
   <header class="siteheader px-5 flex flex-coloumn align-items-center">
     <div class="siteheader__sitetitle font-light text-4xl">
-      <a href="/">LongRun Engineering</a>
+      <a href="/">{{ $config.SITE_TITLE }}</a>
     </div>
   </header>
 </template>

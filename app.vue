@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const config = useRuntimeConfig()
 useHead({
-  titleTemplate: `%s - ${config.BLOG_SITE_TITLE}`,
+  titleTemplate: `%s - ${config.SITE_TITLE}`,
   htmlAttrs: {
     lang: config.public.DEFAUTL_LANGUAGE,
   },
@@ -17,7 +17,5 @@ useHead({
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <NuxtLayout />
 </template>
