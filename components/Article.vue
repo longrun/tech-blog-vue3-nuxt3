@@ -31,9 +31,9 @@ onMounted(() => {
     <img
       :src="entry.fields.coverArt.fields.file.url"
       alt="entry.fields.coverArt.fields.title"
-      class="w-full border-round"
+      class="w-screen md:w-full border-round"
     />
-    <main class="article__main m-0 py-6 px-6">
+    <main class="article__main m-0 py-6 px-4">
       <header>
         <h1 class="text-4xl">
           {{ entry.fields.title }}
@@ -85,8 +85,17 @@ onMounted(() => {
   blockquote {
     border-left: 5px solid #ddd;
     padding: 0.5em;
-    margin-left: 1em;
-    margin-right: 0;
+  }
+
+  pre {
+    white-space: pre;
+    overflow: scroll;
+    display: block;
+    width: calc(100% - 64px);
+
+    code {
+      width: calc(100% - 64px);
+    }
   }
 }
 </style>

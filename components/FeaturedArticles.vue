@@ -13,7 +13,7 @@ useHead({
 </script>
 
 <template>
-  <main class="featured-articles m-0 py-6 px-6">
+  <main class="featured-articles m-0 p-4">
     <article>
       <img
         :src="topicEntry.fields.coverArt.fields.file.url"
@@ -29,8 +29,8 @@ useHead({
       <ArticleMeta :created-at="topicEntry.sys.createdAt" :category="topicEntry.metadata.tags[0].sys.id" />
     </article>
 
-    <div class="grid mt-6">
-      <article v-for="entry in entries.items" :key="entry.sys.id" class="col-6">
+    <div class="grid">
+      <article v-for="entry in entries.items" :key="entry.sys.id" class="col-12 md:col-6 mt-5">
         <img
           :src="entry.fields.coverArt.fields.file.url"
           alt="entry.fields.coverArt.fields.title"

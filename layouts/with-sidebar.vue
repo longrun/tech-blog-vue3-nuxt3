@@ -2,8 +2,7 @@
   <div>
     <SiteHeader />
     <NavBar />
-
-    <div class="grid grid-nogutter py-6 mx-auto" style="max-width: 1200px">
+    <div class="grid grid-nogutter mx-auto" style="max-width: 1200px">
       <div class="col">
         <NuxtPage />
       </div>

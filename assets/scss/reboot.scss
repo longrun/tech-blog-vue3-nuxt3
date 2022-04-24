@@ -9,11 +9,14 @@ body {
 }
 body {
   background-color: var(--surface-ground);
+  overflow-wrap: break-word;
+  line-break: strict;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  margin: 0;
+  margin: 0.5rem 0;
   padding: 0;
+  line-height: 1.25em;
 }
 
 a,

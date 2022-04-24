@@ -4,13 +4,23 @@
 - Nuxt3
 - TypeScript
 - Tools: Vite, Yarn 3, Volar
-- Styles: [Primeflex](https://www.primefaces.org/primeflex/), [Primeicons](https://github.com/primefaces/primeicons)
+- Styles: [Primeflex](https://www.primefaces.org/primeflex/), [Primeicons](https://github.com/primefaces/primeicons), [markdownit](https://github.com/markdown-it/markdown-it)
 
 # Init
 
 - Use Node.js v16.14.2^
 - Install `Volar` VSCode extenstion
 - `yarn install`
+
+# Set up Contentful
+
+## Content model
+
+<img width="814" alt="contentful-content-model" src="https://user-images.githubusercontent.com/15245958/164967460-7ae9d188-79e6-44e1-b8e0-6b63dd1d21d0.png">
+
+## Tag example
+
+<img width="1174" alt="contentful-tag" src="https://user-images.githubusercontent.com/15245958/164967463-b7838cff-00f9-4817-aa4a-dd3259e4076f.png">
 
 # Setup env and configuration
 
