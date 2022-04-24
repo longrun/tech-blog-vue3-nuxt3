@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
     },
     public: {
+      DEFAUTL_LANGUAGE: 'ja',
       APP_NAME: 'tech-blog-vue3-nuxt3',
       APP_URL: 'https://github.com/longrun/tech-blog-vue3-nuxt3',
       BLOG_SITE_TITLE: 'LongRun Engineering',

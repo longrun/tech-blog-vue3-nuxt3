@@ -3,7 +3,7 @@ const config = useRuntimeConfig()
 useHead({
   titleTemplate: `%s - ${config.BLOG_SITE_TITLE}`,
   htmlAttrs: {
-    lang: 'ja',
+    lang: config.public.DEFAUTL_LANGUAGE,
   },
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -1,13 +1,10 @@
 # Tech blog starter-kit with vue3, nuxt3 and Contentful
 
-- Vue3
+- Vue3 - used [setup script](https://vuejs.org/api/sfc-script-setup.html)
 - Nuxt3
-- Vite
 - TypeScript
-- Yarn 3
-- Volar
-- [Primeflex](https://www.primefaces.org/primeflex/)
-- [Primeicons](https://github.com/primefaces/primeicons)
+- Tools: Vite, Yarn 3, Volar
+- Styles: [Primeflex](https://www.primefaces.org/primeflex/), [Primeicons](https://github.com/primefaces/primeicons)
 
 # Init
 
@@ -41,6 +38,32 @@ Write site title, team name, ... on `nuxt.config.ts`.
 ```
 yarn dev
 ```
+
+# Change your site setting
+
+Change site settings in the nuxt.config.ts to yours.
+
+```
+  runtimeConfig: {
+    private: {
+      ...
+    },
+    public: {
+      DEFAUTL_LANGUAGE: 'ja',
+      APP_NAME: 'tech-blog-vue3-nuxt3',
+      APP_URL: 'https://github.com/longrun/tech-blog-vue3-nuxt3',
+      BLOG_SITE_TITLE: 'LongRun Engineering',
+      TEAM_NAME: 'LongRun Inc.',
+      TEAM_WEBSITE_URL: 'https://longmayyou.run',
+      TEAM_STATEMENT: 'ランナーが諦めなくていい世界をつくる',
+      GITHUB_ORGANIZATION_URL: 'https://github.com/longrun',
+      GA_APP_NAME: 'LongRun Blog',
+      GA_ID: process.env.GA_ID,
+    },
+  },
+```
+
+Change `favicion.ico` and `appletouch-icon.png` in the ~/public directory to yours.
 
 # LICENSE
 
