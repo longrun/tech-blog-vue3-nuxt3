@@ -42,13 +42,6 @@ Write site title, team name, ... on `nuxt.config.ts`.
 yarn dev
 ```
 
-# build and start
-
-```
-yarn build
-yarn start
-```
-
 # LICENSE
 
 - [MIT LICENSE](./LICENSE)
