@@ -9,6 +9,7 @@ import emo from 'markdown-it-emoji'
 import def from 'markdown-it-deflist'
 import ins from 'markdown-it-ins'
 import container from 'markdown-it-container'
+import lazy from 'markdown-it-image-lazy-loading'
 
 const markdownit = new mdit({
   html: true,
@@ -26,6 +27,7 @@ const markdownit = new mdit({
   .use(def)
   .use(ins)
   .use(container, 'codeblock', { marker: '@' })
+  .use(lazy)
 
 markdownit.linkify.set({ fuzzyEmail: false })
 

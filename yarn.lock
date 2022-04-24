@@ -3953,6 +3953,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"image-size@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "image-size@npm:1.0.1"
+  dependencies:
+    queue: 6.0.2
+  bin:
+    image-size: bin/image-size.js
+  checksum: ffa74672dc7a1b6529c66255adbfe4e7865408004db88ed100855816f03175494ec21ef9dad199b8685b5b194996ebe83ab27803af152adb66a301172fdd622d
+  languageName: node
+  linkType: hard
+
 "immutable@npm:^4.0.0":
   version: 4.0.0
   resolution: "immutable@npm:4.0.0"
@@ -4838,6 +4849,15 @@ __metadata:
   version: 3.0.3
   resolution: "markdown-it-footnote@npm:3.0.3"
   checksum: 3657f943f938603ec74e86a41883bfac5564eec7733b8d74e00894cb2b2b73f823c072bccd8aa07c418ae1e017a4f5d22c6309627dfc2800100fcb2c6c71e24b
+  languageName: node
+  linkType: hard
+
+"markdown-it-image-lazy-loading@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "markdown-it-image-lazy-loading@npm:1.2.0"
+  dependencies:
+    image-size: ^1.0.0
+  checksum: 975bd973c8f13e5947ea01e2be554bcb31bec4bb5a9d6c555bebf73e02d8fc8792e84bf2ac4433018a072d3851de78fe3dad82e56434903cbbfebce5a1620c36
   languageName: node
   linkType: hard
 
@@ -6391,6 +6411,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"queue@npm:6.0.2":
+  version: 6.0.2
+  resolution: "queue@npm:6.0.2"
+  dependencies:
+    inherits: ~2.0.3
+  checksum: ebc23639248e4fe40a789f713c20548e513e053b3dc4924b6cb0ad741e3f264dcff948225c8737834dd4f9ec286dbc06a1a7c13858ea382d9379f4303bcc0916
+  languageName: node
+  linkType: hard
+
 "radix3@npm:^0.1.1":
   version: 0.1.1
   resolution: "radix3@npm:0.1.1"
@@ -6714,6 +6743,7 @@ __metadata:
     markdown-it-deflist: ^2.1.0
     markdown-it-emoji: ^2.0.0
     markdown-it-footnote: ^3.0.3
+    markdown-it-image-lazy-loading: ^1.2.0
     markdown-it-ins: ^3.0.1
     markdown-it-sub: ^1.0.0
     markdown-it-sup: ^1.0.0
@@ -6726,6 +6756,7 @@ __metadata:
     sass: ^1.50.1
     typescript: ^4.6.3
     vite-plugin-eslint: ^1.5.2
+    vue-gtag: ^2.0.1
     vue-i18n: ^9.1.9
   languageName: unknown
   linkType: soft
@@ -7890,6 +7921,15 @@ __metadata:
   peerDependencies:
     eslint: ">=6.0.0"
   checksum: 8cc751e9fc2bfba93664ad8945732ab1c97791f9123e703de8669b65670d1e01906d80436bf4932d7ee6fa6174ed4545e8abb059206c88f4bd71957ca6cf7ba8
+  languageName: node
+  linkType: hard
+
+"vue-gtag@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "vue-gtag@npm:2.0.1"
+  peerDependencies:
+    vue: ^3.0.0
+  checksum: 949260ae4fbe6db62759d4050fa80c061e39025f7a9f50a97c662cac8d7d8ebf5d60228a7f9aa75d7ea910fb977852e954099a276f432c8cd13a063c40ba4ccd
   languageName: node
   linkType: hard
 

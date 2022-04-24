@@ -2,6 +2,11 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  // if you want to use server-side rendering (SSR)
+  ssr: true,
+  // target: 'server',
+  // if you want to use static HTML generation (SSG)
+  target: 'static',
   typescript: {
     shim: false,
   },
@@ -29,6 +34,8 @@ export default defineNuxtConfig({
       TEAM_WEBSITE_URL: 'https://longmayyou.run',
       TEAM_STATEMENT: 'ランナーが諦めなくていい世界をつくる',
       GITHUB_ORGANIZATION_URL: 'https://github.com/longrun',
+      GA_APP_NAME: 'LongRun Blog',
+      GA_ID: process.env.GA_ID,
     },
   },
   head: {
