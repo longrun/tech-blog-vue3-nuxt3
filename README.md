@@ -55,7 +55,7 @@ Change site settings in the nuxt.config.ts to yours.
       BLOG_SITE_TITLE: 'LongRun Engineering',
       TEAM_NAME: 'LongRun Inc.',
       TEAM_WEBSITE_URL: 'https://longmayyou.run',
-      TEAM_STATEMENT: 'ランナーが諦めなくていい世界をつくる',
+      TEAM_STATEMENT: 'Creating a world where runners don\'t have to give up',
       GITHUB_ORGANIZATION_URL: 'https://github.com/longrun',
       GA_APP_NAME: 'LongRun Blog',
       GA_ID: process.env.GA_ID,
