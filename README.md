@@ -92,6 +92,13 @@ yarn generate
 
 You can find more deployment information: https://nuxtjs.org/deployments/
 
+
+# Package upgrade
+
+```
+yarn upgrade-interactive
+```
+
 # LICENSE
 
 - [MIT LICENSE](./LICENSE)
