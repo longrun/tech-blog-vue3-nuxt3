@@ -24,7 +24,7 @@
 
 # Setup env and configuration
 
-Put `.env` file on project root and include Contentful Identify and Token.
+Rename file `.env.template` to `.env` and setup Contentful Identify and Token.
 
 ```
 CONTENTFUL_CONTENT_KEY=<your contentful content id>
@@ -90,7 +90,7 @@ Generate files.
 yarn generate
 ```
 
-And deployment `dist` directory to any static hosting site. For example, Firebase Hosting, GitHub Pages, etc.
+You can find more deployment information: https://nuxtjs.org/deployments/
 
 # LICENSE
 
