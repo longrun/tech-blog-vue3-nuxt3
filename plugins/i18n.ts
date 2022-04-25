@@ -6,7 +6,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
   const i18n = createI18n({
     // locale: config.public.DEFAULT_LANGUAGE,
-    locale: 'en',
+    locale: 'ja',
     fallbackLocale: config.public.DEFAULT_LANGUAGE,
     messages,
   })
