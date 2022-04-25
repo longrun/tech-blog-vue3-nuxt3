@@ -75,6 +75,23 @@ Change site settings in the nuxt.config.ts to yours.
 
 Change `favicion.ico` and `appletouch-icon.png` in the ~/public directory to yours.
 
+
+# build for SSG
+
+Check `plugins/contentful.ts` import section.
+
+```
+import contentful from 'contentful'
+``
+
+Generate files.
+
+```
+yarn generate
+```
+
+And deployment `dist` directory to any static hosting site. For example, Firebase Hosting, GitHub Pages, etc.
+
 # LICENSE
 
 - [MIT LICENSE](./LICENSE)
