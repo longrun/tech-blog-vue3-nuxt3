@@ -359,9 +359,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@eslint/eslintrc@npm:1.2.1"
+"@eslint/eslintrc@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@eslint/eslintrc@npm:1.2.2"
   dependencies:
     ajv: ^6.12.4
     debug: ^4.3.2
@@ -372,7 +372,7 @@ __metadata:
     js-yaml: ^4.1.0
     minimatch: ^3.0.4
     strip-json-comments: ^3.1.1
-  checksum: 1f797b9f94d71b965992cf6c44e3bcb574643014fd1e3d4862d25056bd5568f59c488461a7e9a1c1758ca7f0def5d3cb69c3d8b38581bcf4a53af74371243797
+  checksum: d891036bbffb0efec1462aa4a603ed6e349d546b1632dde7d474ddd15c2a8b6895671b25293f1d3ba10ff629c24a3649ad049373fe695a0e44b612537088563c
   languageName: node
   linkType: hard
 
@@ -2678,10 +2678,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:~2.1.0":
-  version: 2.1.0
-  resolution: "entities@npm:2.1.0"
-  checksum: a10a877e489586a3f6a691fe49bf3fc4e58f06c8e80522f08214a5150ba457e7017b447d4913a3fa041bda06ee4c92517baa4d8d75373eaa79369e9639225ffd
+"entities@npm:~3.0.1":
+  version: 3.0.1
+  resolution: "entities@npm:3.0.1"
+  checksum: aaf7f12033f0939be91f5161593f853f2da55866db55ccbf72f45430b8977e2b79dbd58c53d0fdd2d00bd7d313b75b0968d09f038df88e308aa97e39f9456572
   languageName: node
   linkType: hard
 
@@ -3006,7 +3006,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^8.6.0":
+"eslint-plugin-vue@npm:^8.7.1":
   version: 8.7.1
   resolution: "eslint-plugin-vue@npm:8.7.1"
   dependencies:
@@ -3067,11 +3067,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.13.0":
-  version: 8.13.0
-  resolution: "eslint@npm:8.13.0"
+"eslint@npm:^8.14.0":
+  version: 8.14.0
+  resolution: "eslint@npm:8.14.0"
   dependencies:
-    "@eslint/eslintrc": ^1.2.1
+    "@eslint/eslintrc": ^1.2.2
     "@humanwhocodes/config-array": ^0.9.2
     ajv: ^6.10.0
     chalk: ^4.0.0
@@ -3108,7 +3108,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: bc7d2fc9a046d42cb2c8987573ecaf534c1fae14747c4695e32388e179c5f21b83eefdb3e4f35924bf76152e226d7cc9dfb21f12348baf12c803109005b17439
+  checksum: 87d2e3e5eb93216d4ab36006e7b8c0bfad02f40b0a0f193f1d42754512cd3a9d8244152f1c69df5db2e135b3c4f1c10d0ed2f0881fe8a8c01af55465968174c1
   languageName: node
   linkType: hard
 
@@ -4682,12 +4682,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"linkify-it@npm:^3.0.1":
-  version: 3.0.3
-  resolution: "linkify-it@npm:3.0.3"
+"linkify-it@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "linkify-it@npm:4.0.0"
   dependencies:
     uc.micro: ^1.0.1
-  checksum: 31367a4bb70c5bbc9703246236b504b0a8e049bcd4e0de4291fa50f0ebdebf235b5eb54db6493cb0b1319357c6eeafc4324c9f4aa34b0b943d9f2e11a1268fbc
+  checksum: 40b7b02482ecf2f9f7a4b1e276ed75028ba4e356c1ee3af88457d08e04692dfa0ebaa93ccfd6ef09ae072927d640b47a3ba5a2a62ceb0918619f4cedc36b3f9b
   languageName: node
   linkType: hard
 
@@ -4972,10 +4972,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it-emoji@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "markdown-it-emoji@npm:2.0.0"
-  checksum: 7d25844134d98a4e2cf70d9a14ea4ec5afc3f64740d69c88012795c8a24ed2f286850b72fd4437d60d2fe34f73cc1889a7e8e3ab4663f4fc3a4899991601bbba
+"markdown-it-emoji@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "markdown-it-emoji@npm:2.0.2"
+  checksum: e93ca19591b8dd543029e1997763e094a0861185f71403ffa522f09860da0a6457b3a2bd50e6e59cf1551b28ff464a2c2f596045a577323bd1d546cd1f0cc377
   languageName: node
   linkType: hard
 
@@ -5016,18 +5016,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:^12.3.2":
-  version: 12.3.2
-  resolution: "markdown-it@npm:12.3.2"
+"markdown-it@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "markdown-it@npm:13.0.0"
   dependencies:
     argparse: ^2.0.1
-    entities: ~2.1.0
-    linkify-it: ^3.0.1
+    entities: ~3.0.1
+    linkify-it: ^4.0.0
     mdurl: ^1.0.1
     uc.micro: ^1.0.5
   bin:
     markdown-it: bin/markdown-it.js
-  checksum: 890555711c1c00fa03b936ca2b213001a3b9b37dea140d8445ae4130ce16628392aad24b12e2a0a9935336ca5951f2957a38f4e5309a2e38eab44e25ff32a41e
+  checksum: aa355b3f08928c746bda88c19602152d8af70d5eee3caca61a66065e1878bdd2074b2d73947b6ed5dcc6f975a9560b6c026044c4d80cd861d5d5d6757093eaba
   languageName: node
   linkType: hard
 
@@ -6934,17 +6934,17 @@ __metadata:
     "@typescript-eslint/parser": ^5.20.0
     "@vue/eslint-config-typescript": ^10.0.0
     contentful: ^9.1.24
-    eslint: ^8.13.0
+    eslint: ^8.14.0
     eslint-config-prettier: ^8.5.0
-    eslint-plugin-vue: ^8.6.0
+    eslint-plugin-vue: ^8.7.1
     gh-pages: ^3.2.3
     install: ^0.13.0
     lodash.camelcase: ^4.3.0
     lodash.upperfirst: ^4.3.1
-    markdown-it: ^12.3.2
+    markdown-it: ^13.0.0
     markdown-it-container: ^3.0.0
     markdown-it-deflist: ^2.1.0
-    markdown-it-emoji: ^2.0.0
+    markdown-it-emoji: ^2.0.2
     markdown-it-footnote: ^3.0.3
     markdown-it-image-lazy-loading: ^1.2.0
     markdown-it-ins: ^3.0.1
@@ -6959,7 +6959,7 @@ __metadata:
     push-dir: ^0.4.1
     sass: ^1.50.1
     typescript: ^4.6.3
-    vite-plugin-eslint: ^1.5.2
+    vite-plugin-eslint: ^1.6.0
     vue-gtag: ^2.0.1
     vue-i18n: ^9.1.9
   languageName: unknown
@@ -8025,16 +8025,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-eslint@npm:^1.5.2":
-  version: 1.5.2
-  resolution: "vite-plugin-eslint@npm:1.5.2"
+"vite-plugin-eslint@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "vite-plugin-eslint@npm:1.6.0"
   dependencies:
     "@rollup/pluginutils": ^4.2.1
     rollup: ^2.70.2
   peerDependencies:
     eslint: ">=7"
     vite: ^2.0.0
-  checksum: d24927d2da98c19412d6e20c20ba1fce3b6a53857ff0f0930444033a2844e8815ec9899e57444081b5f16915a37c580e6a7b1ba6232acaa9baa3cfebd54527df
+  checksum: 9fe5e5f25b9b8a55ea79bee664198e742c88eb326223b2e34b9841817d47dd54db2e579b43629e8bd7cf293270873c574899fa94d22ec82faf6532eff39977b0
   languageName: node
   linkType: hard
 
