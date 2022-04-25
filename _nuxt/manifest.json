@@ -1,0 +1,66 @@
+{
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "entry-653e5ba6.mjs",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "dynamicImports": [
+      "pages/article/[articleId].vue",
+      "pages/category/[categoryId].vue",
+      "pages/index.vue",
+      "layouts/with-sidebar.vue"
+    ],
+    "css": [
+      "entry.f7b106f7.css"
+    ],
+    "assets": [
+      "primeicons.c9eaf535.eot",
+      "primeicons.788dba0a.ttf",
+      "primeicons.feb68bf6.woff",
+      "primeicons.2ab98f70.svg"
+    ]
+  },
+  "pages/article/[articleId].vue": {
+    "file": "_articleId_-c16c4b51.mjs",
+    "src": "pages/article/[articleId].vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ArticleMeta-32e03145.mjs",
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "_ArticleMeta-32e03145.mjs": {
+    "file": "ArticleMeta-32e03145.mjs",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/category/[categoryId].vue": {
+    "file": "_categoryId_-0f9a80fc.mjs",
+    "src": "pages/category/[categoryId].vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_ArticleMeta-32e03145.mjs"
+    ]
+  },
+  "pages/index.vue": {
+    "file": "index-a9188a33.mjs",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_ArticleMeta-32e03145.mjs"
+    ]
+  },
+  "layouts/with-sidebar.vue": {
+    "file": "with-sidebar-948701ef.mjs",
+    "src": "layouts/with-sidebar.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "with-sidebar.5d31250b.css"
+    ]
+  }
+}
