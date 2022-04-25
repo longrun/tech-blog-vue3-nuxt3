@@ -1,0 +1,35 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+body {
+  background-color: var(--surface-ground);
+  overflow-wrap: break-word;
+  line-break: strict;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0.5rem 0;
+  padding: 0;
+  line-height: 1.25em;
+}
+
+a,
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  color: var(--primary-color);
+}
+a:hover {
+  opacity: 0.87;
+}
+
