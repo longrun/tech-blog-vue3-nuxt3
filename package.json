@@ -6,6 +6,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "deploy:gh": "push-dir --dist=.output/public --branch=feat/startup --cleanup",
     "preview": "nuxt preview",
     "lint": "eslint --no-fix --ext .js,.ts,.vue .",
     "prettier": "prettier --check '**/*.{js,ts,vue}'"
@@ -17,8 +18,10 @@
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^8.6.0",
+    "gh-pages": "^3.2.3",
     "nuxt": "3.0.0-rc.1",
     "prettier": "^2.6.2",
+    "push-dir": "^0.4.1",
     "sass": "^1.50.1",
     "vite-plugin-eslint": "^1.5.2"
   },
