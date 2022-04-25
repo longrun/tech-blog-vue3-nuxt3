@@ -6,7 +6,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy:gh": "push-dir --dist=.output/public --branch=feat/startup --cleanup",
+    "deploy:gh": "push-dir --dist=dist --branch=feat/startup --cleanup",
     "preview": "nuxt preview",
     "lint": "eslint --no-fix --ext .js,.ts,.vue .",
     "prettier": "prettier --check '**/*.{js,ts,vue}'"
