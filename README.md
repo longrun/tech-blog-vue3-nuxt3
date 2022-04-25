@@ -82,7 +82,7 @@ Check `plugins/contentful.ts` import section.
 
 ```
 import contentful from 'contentful'
-``
+```
 
 Generate files.
 
