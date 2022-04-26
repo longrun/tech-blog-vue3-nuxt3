@@ -1,10 +1,10 @@
 import { defineNuxtPlugin } from '#app'
 
-// for SSG
-// import contentful from 'contentful'
+// for SSR, SSG
+import contentful from 'contentful'
 
-// for SSR
-import * as contentful from 'contentful'
+// for dev
+// import * as contentful from 'contentful'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()

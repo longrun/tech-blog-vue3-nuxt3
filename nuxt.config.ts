@@ -4,9 +4,9 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   // if you want to use server-side rendering (SSR)
   ssr: true,
-  // target: 'server',
+  target: 'server',
   // if you want to use static HTML generation (SSG)
-  target: 'static',
+  // target: 'static',
   typescript: {
     shim: false,
   },
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     'assets/scss/team-theme.scss',
     'assets/scss/reboot.scss',
   ],
-  plugins: ['prismjs/prism'],
+  plugins: ['prismjs/prism.js'],
   runtimeConfig: {
     private: {
       CONTENTFUL_CONTENT_KEY: process.env.CONTENTFUL_CONTENT_KEY,
