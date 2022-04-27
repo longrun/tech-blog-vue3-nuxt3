@@ -14,17 +14,17 @@
 
 # Set up Contentful
 
-## Content model
+## Content model setting example in this project
 
 <img width="814" alt="contentful-content-model" src="https://user-images.githubusercontent.com/15245958/164967460-7ae9d188-79e6-44e1-b8e0-6b63dd1d21d0.png">
 
-## Tag example
+## Tag setting example in in this project
 
 <img width="1174" alt="contentful-tag" src="https://user-images.githubusercontent.com/15245958/164967463-b7838cff-00f9-4817-aa4a-dd3259e4076f.png">
 
 # Setup env and configuration
 
-Rename file `.env.template` to `.env` and setup Contentful Identify and Token.
+Make sure to rename file `.env.template` to `.env` and write Contentful Identify and Token.
 
 ```
 CONTENTFUL_CONTENT_KEY=<your contentful content id>
@@ -32,7 +32,7 @@ CONTENTFUL_SPACE_ID=<your contentful space id>
 CONTENTFUL_ACCESS_TOKEN=<your contentful access token>
 ```
 
-Write site title, team name, ... on `nuxt.config.ts`.
+Write site title, team name, ... in `nuxt.config.ts`.
 
 ```
   runtimeConfig: {
@@ -82,6 +82,15 @@ Check `plugins/contentful.ts` import section.
 
 ```
 import contentful from 'contentful'
+```
+
+And ssr:true and target:static in `nuxt.config.ts`.
+
+```
+export default defineNuxtConfig({
+  ssr: true,
+  target: 'static',
+  ...
 ```
 
 Generate files.
