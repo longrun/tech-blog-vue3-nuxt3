@@ -1,12 +1,11 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy:gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "preview": "nuxt preview",
     "lint": "eslint --no-fix --ext .js,.ts,.vue .",
     "prettier": "prettier --check '**/*.{js,ts,vue}'"
@@ -21,12 +20,10 @@
     "gh-pages": "^3.2.3",
     "nuxt": "3.0.0-rc.1",
     "prettier": "^2.6.2",
-    "push-dir": "^0.4.1",
     "sass": "^1.51.0",
     "vite-plugin-eslint": "^1.6.0"
   },
   "dependencies": {
-    "@nuxtjs/markdownit": "^2.0.0",
     "contentful": "^9.1.27",
     "install": "^0.13.0",
     "lodash.camelcase": "^4.3.0",
