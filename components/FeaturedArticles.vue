@@ -4,7 +4,6 @@ const entries = await $contentfulClient.getEntries({
   order: '-sys.createdAt',
   limit: 10,
 })
-const topicEntry = entries.items.shift()
 
 const config = useRuntimeConfig()
 useHead({
@@ -14,30 +13,25 @@ useHead({
 
 <template>
   <main class="featured-articles m-0 p-4">
-    <article>
-      <img
-        :src="topicEntry.fields.coverArt.fields.file.url"
-        alt="topicEntry.fields.coverArt.fields.title"
-        class="w-full border-round"
-      />
-
-      <h1 class="text-4xl">
-        <NuxtLink :to="`/article/${topicEntry.fields.slug}`">
-          {{ topicEntry.fields.title }}
-        </NuxtLink>
-      </h1>
-      <ArticleMeta :created-at="topicEntry.sys.createdAt" :category="topicEntry.metadata.tags[0].sys.id" />
-    </article>
-
     <div class="grid">
-      <article v-for="entry in entries.items" :key="entry.sys.id" class="col-12 md:col-6 mt-5">
+      <article
+        v-for="(entry, i) in entries.items"
+        :key="entry.sys.id"
+        :class="['col-12', i > 0 ? 'md:col-6' : undefined]"
+        class="mb-5"
+      >
         <img
           :src="entry.fields.coverArt.fields.file.url"
           alt="entry.fields.coverArt.fields.title"
           class="w-full border-round"
           loading="lazy"
         />
-        <h2>
+        <h1 v-if="i === 0" class="text-4xl">
+          <NuxtLink :to="`/article/${entry.fields.slug}`">
+            {{ entry.fields.title }}
+          </NuxtLink>
+        </h1>
+        <h2 v-else>
           <NuxtLink :to="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}
           </NuxtLink>
