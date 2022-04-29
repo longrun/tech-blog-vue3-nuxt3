@@ -5,9 +5,10 @@ import messages from '@/messages'
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
   const i18n = createI18n({
-    // locale: config.public.DEFAULT_LANGUAGE,
-    locale: 'ja',
-    fallbackLocale: config.public.DEFAULT_LANGUAGE,
+    legacy: false,
+    locale: config.public.DEFAULT_LANGUAGE,
+    fallbackLocale: 'en',
+    globalInjection: true,
     messages,
   })
 
