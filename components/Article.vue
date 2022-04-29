@@ -8,13 +8,15 @@ const props = defineProps<Props>()
 
 const config = useRuntimeConfig()
 
-const { $contentfulClient } = useNuxtApp()
-const entries = await $contentfulClient.getEntries({
-  content_type: config.private.CONTENTFUL_CONTENT_KEY,
-  'fields.slug[in]': props.articleId,
-  limit: 1,
+const { data } = await useAsyncData('article', async (nuxtApp) => {
+  const { $contentfulClient } = nuxtApp
+  return $contentfulClient.getEntries({
+    content_type: config.private.CONTENTFUL_CONTENT_KEY,
+    'fields.slug[in]': props.articleId,
+    limit: 1,
+  })
 })
-const entry = entries.items.shift()
+const entry = data.value.items[0]
 const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody)
 
 useHead({
@@ -22,7 +24,9 @@ useHead({
 })
 
 onMounted(() => {
-  Prism.highlightAll()
+  if (process.server) {
+    Prism.highlightAll()
+  }
 })
 </script>
 

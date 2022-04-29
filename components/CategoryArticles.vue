@@ -9,16 +9,19 @@ const props = defineProps<Props>()
 
 const config = useRuntimeConfig()
 
-const { $contentfulClient } = useNuxtApp()
-const entries = await $contentfulClient.getEntries({
-  content_type: config.private.CONTENTFUL_CONTENT_KEY,
-  'metadata.tags.sys.id[all]': props.categoryId,
-  order: '-sys.createdAt',
-  limit: 10,
+const { data } = await useAsyncData('article', async (nuxtApp) => {
+  const { $contentfulClient } = nuxtApp
+  return $contentfulClient.getEntries({
+    content_type: config.private.CONTENTFUL_CONTENT_KEY,
+    'metadata.tags.sys.id[all]': props.categoryId,
+    order: '-sys.createdAt',
+    limit: 10,
+  })
 })
+const items = data.value.items
 
 const categoryTitle = upperFirst(camelCase(props.categoryId))
-const entryCount = entries.items.length
+const entryCount = items.length
 useHead({
   title: `${categoryTitle} の記事`,
 })
@@ -30,7 +33,7 @@ useHead({
     <p v-if="entryCount === 0">{{ $t('category_article_empty_state') }}</p>
     <p v-else>{{ $t('category_article_count', { count: entryCount }) }}</p>
 
-    <article v-for="entry in entries.items" :key="entry.sys.id">
+    <article v-for="entry in items" :key="entry.sys.id">
       <div class="grid">
         <div class="col-6">
           <img
@@ -45,7 +48,7 @@ useHead({
               {{ entry.fields.title }}
             </NuxtLink>
           </h2>
-          <ArticleMeta :created-at="entry.sys.createdAt" />
+          <ArticleMeta :created-at="entry.sys.createdAt" category="__hide__" />
         </div>
       </div>
     </article>

@@ -1,9 +1,12 @@
 <script lang="ts" setup>
-const { $contentfulClient } = useNuxtApp()
-const entries = await $contentfulClient.getEntries({
-  order: '-sys.createdAt',
-  limit: 10,
+const { data } = await useAsyncData('entries', async (nuxtApp) => {
+  const { $contentfulClient } = nuxtApp
+  return $contentfulClient.getEntries({
+    order: '-sys.createdAt',
+    limit: 10,
+  })
 })
+const items = data.value.items
 
 const config = useRuntimeConfig()
 useHead({
@@ -15,7 +18,7 @@ useHead({
   <main class="featured-articles m-0 p-4">
     <div class="grid">
       <article
-        v-for="(entry, i) in entries.items"
+        v-for="(entry, i) in items"
         :key="entry.sys.id"
         :class="['col-12', i > 0 ? 'md:col-6' : undefined]"
         class="mb-5"
@@ -27,14 +30,14 @@ useHead({
           loading="lazy"
         />
         <h1 v-if="i === 0" class="text-4xl">
-          <NuxtLink :to="`/article/${entry.fields.slug}`">
+          <a :href="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}
-          </NuxtLink>
+          </a>
         </h1>
         <h2 v-else>
-          <NuxtLink :to="`/article/${entry.fields.slug}`">
+          <a :href="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}
-          </NuxtLink>
+          </a>
         </h2>
         <ArticleMeta :created-at="entry.sys.createdAt" :category="entry.metadata.tags[0].sys.id" />
       </article>
