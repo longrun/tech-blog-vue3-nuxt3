@@ -19,14 +19,12 @@ export default defineNuxtConfig({
     'assets/scss/team-theme.scss',
     'assets/scss/reboot.scss',
   ],
-  plugins: ['prismjs/prism.js'],
+  plugins: [{ src: 'prismjs/prism.js', mode: 'server' }],
   runtimeConfig: {
     private: {
       CONTENTFUL_CONTENT_KEY: process.env.CONTENTFUL_CONTENT_KEY,
       CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
       CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
-      GA_ID: process.env.GA_ID,
-      GA_APP_NAME: 'LongRun Blog',
     },
     public: {
       DEFAUTL_LANGUAGE: 'ja',
@@ -37,6 +35,8 @@ export default defineNuxtConfig({
       TEAM_WEBSITE_URL: 'https://longmayyou.run',
       TEAM_STATEMENT: 'ランナーが諦めなくていい世界をつくる',
       GITHUB_ORGANIZATION_URL: 'https://github.com/longrun',
+      GA_ID: process.env.GA_ID,
+      GA_APP_NAME: 'LongRun Blog',
     },
   },
   head: {
