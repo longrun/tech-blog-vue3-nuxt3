@@ -3,7 +3,7 @@ import VueGTag from 'vue-gtag'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
-  if (!config.private.GA_ID) {
+  if (!config.public.GA_ID) {
     return
   }
 
@@ -12,10 +12,10 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(
     VueGTag,
     {
-      appName: config.private.GA_APP_NAME,
+      appName: config.public.GA_APP_NAME,
       pageTrackerScreenviewEnabled: true,
       config: {
-        id: config.private.GA_ID,
+        id: config.public.GA_ID,
       },
     },
     router,
