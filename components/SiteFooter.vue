@@ -4,7 +4,7 @@ import { version } from '../package.json'
 
 <template>
   <footer class="sitefooter text-center pt-6 pb-2">
-    <img src="@/static/images/logo-white-bg_transparent-465x195.png" style="width: 120px" class="mb-3" />
+    <img src="/images/logo-white-bg_transparent-465x195.png" style="width: 120px" class="mb-3" />
     <div>{{ $config.TEAM_STATEMENT }}</div>
     <div class="my-3">
       &copy;
