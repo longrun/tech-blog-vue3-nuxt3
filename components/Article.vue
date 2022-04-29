@@ -30,7 +30,7 @@ onMounted(() => {
   <div>
     <img
       :src="entry.fields.coverArt.fields.file.url"
-      alt="entry.fields.coverArt.fields.title"
+      :alt="entry.fields.coverArt.fields.title"
       class="w-screen md:w-full border-round"
     />
     <main class="article__main m-0 p-4">
