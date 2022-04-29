@@ -22,7 +22,7 @@ useHead({
       >
         <img
           :src="entry.fields.coverArt.fields.file.url"
-          alt="entry.fields.coverArt.fields.title"
+          :alt="entry.fields.coverArt.fields.title"
           class="w-full border-round"
           loading="lazy"
         />
