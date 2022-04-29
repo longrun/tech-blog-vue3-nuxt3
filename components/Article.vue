@@ -17,7 +17,7 @@ const { data } = await useAsyncData('article', async (nuxtApp) => {
   })
 })
 const entry = data.value.items[0]
-const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody)
+const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody) || entry
 
 useHead({
   title: entry.fields.title,

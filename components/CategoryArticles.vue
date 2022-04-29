@@ -44,9 +44,9 @@ useHead({
         </div>
         <div class="col-6">
           <h2>
-            <NuxtLink :to="`/article/${entry.fields.slug}`">
+            <a :href="`/article/${entry.fields.slug}`">
               {{ entry.fields.title }}
-            </NuxtLink>
+            </a>
           </h2>
           <ArticleMeta :created-at="entry.sys.createdAt" category="__hide__" />
         </div>
