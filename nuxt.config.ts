@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       TEAM_NAME: 'LongRun Inc.',
       TEAM_WEBSITE_URL: 'https://longmayyou.run',
       TEAM_STATEMENT: 'ランナーが諦めなくていい世界をつくる',
-      TEAM_LOGO_IMAGE_ON_FOOTER_: '/images/logo-white-bg_transparent-465x195.png',
+      TEAM_LOGO_IMAGE_ON_FOOTER: '/images/logo-white-bg_transparent-465x195.png',
       GITHUB_ORGANIZATION_URL: 'https://github.com/longrun',
       GA_ID: process.env.GA_ID,
       GA_APP_NAME: 'LongRun Blog',
