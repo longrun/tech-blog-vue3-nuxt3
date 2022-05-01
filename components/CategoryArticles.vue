@@ -28,10 +28,23 @@ const categoryTitle = upperFirst(camelCase(props.categoryId))
 const entryCount = items.length
 
 const { t } = useI18n()
+const categoryHeadline = t('category_headline', { category: categoryTitle })
+const uri = useRoute().path
+
 useHead({
-  title: t('category_headline', { category: categoryTitle }),
+  title: categoryHeadline,
   meta: [
-    { hid: 'description', name: 'description', content: t('category_meta_description', { category: categoryTitle }) },
+    { hid: 'description', name: 'description', content: categoryHeadline },
+    { hid: 'og:type', property: 'og:type', content: 'website' },
+    { hid: 'og:title', property: 'og:title', content: categoryHeadline },
+    { hid: 'og:description', property: 'og:description', content: categoryHeadline },
+    { hid: 'og:url', property: 'og:url', content: `${config.public.HOST}${uri}` },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: `${config.public.HOST}${config.public.TEAM_LOGO_IMAGE_ON_FOOTER}`,
+    },
+    { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
   ],
 })
 </script>
