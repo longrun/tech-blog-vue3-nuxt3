@@ -1,5 +1,5 @@
 {
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
@@ -21,9 +21,11 @@
     "nuxt": "3.0.0-rc.1",
     "prettier": "^2.6.2",
     "sass": "^1.51.0",
+    "vite-plugin-compression": "^0.5.1",
     "vite-plugin-eslint": "^1.6.0"
   },
   "dependencies": {
+    "@nuxt-modules/compression": "^0.1.0",
     "contentful": "^9.1.27",
     "install": "^0.13.0",
     "lodash.camelcase": "^4.3.0",

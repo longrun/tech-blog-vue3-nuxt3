@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     'assets/scss/team-theme.scss',
   ],
   plugins: [{ src: 'prismjs/prism.js', mode: 'server' }],
+
   runtimeConfig: {
     private: {
       CONTENTFUL_CONTENT_KEY: process.env.CONTENTFUL_CONTENT_KEY,
@@ -27,6 +28,7 @@ export default defineNuxtConfig({
       CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
     },
     public: {
+      compression: true,
       DEFAULT_LANGUAGE: 'ja',
       APP_NAME: 'tech-blog-vue3-nuxt3',
       APP_URL: 'https://github.com/longrun/tech-blog-vue3-nuxt3',
@@ -44,4 +46,15 @@ export default defineNuxtConfig({
     viewport: 'width=device-width, initial-scale=1',
     charset: 'utf-8',
   },
+  buildModules: [
+    [
+      '@nuxt-modules/compression',
+      {
+        algorithm: 'brotliCompress',
+        success: () => {
+          console.log('compression success')
+        },
+      },
+    ],
+  ],
 })
