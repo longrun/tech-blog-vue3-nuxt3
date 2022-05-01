@@ -67,7 +67,7 @@ yarn dev
 Conguraturation 🎉
 
 
-Change `favicion.ico` and `appletouch-icon.png` in the ~/public directory to yours.
+Don't forget change `favicion.ico` and `appletouch-icon.png` in the ~/public directory to yours.
 
 
 # Build for SSG
