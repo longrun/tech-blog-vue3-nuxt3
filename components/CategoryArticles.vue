@@ -1,14 +1,18 @@
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
 import upperFirst from 'lodash.upperFirst'
 import camelCase from 'lodash.camelCase'
 
+/**
+ * Define props
+ */
 interface Props {
   categoryId: string
 }
 const props = defineProps<Props>()
 
+// ----------------------------------------------------------------------------
 const config = useRuntimeConfig()
-
 const { data } = await useAsyncData('article', async (nuxtApp) => {
   const { $contentfulClient } = nuxtApp
   return $contentfulClient.getEntries({
@@ -22,8 +26,10 @@ const items = data.value.items
 
 const categoryTitle = upperFirst(camelCase(props.categoryId))
 const entryCount = items.length
+
+const { t } = useI18n()
 useHead({
-  title: `${categoryTitle} の記事`,
+  title: t('category_headline', { category: categoryTitle }),
 })
 </script>
 

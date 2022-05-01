@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import { version } from '../package.json'
+
+const teamLogo = useRuntimeConfig().public.TEAM_LOGO_IMAGE_ON_FOOTER_
 </script>
 
 <template>
   <footer class="sitefooter text-center pt-6 pb-2">
-    <img src="/images/logo-white-bg_transparent-465x195.png" style="width: 120px" class="mb-3" />
+    <img :src="teamLogo" style="width: 120px" class="mb-3" />
     <div>{{ $config.TEAM_STATEMENT }}</div>
     <div class="my-3">
       &copy;
