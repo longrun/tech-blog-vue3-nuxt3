@@ -23,6 +23,8 @@ const { data } = await useAsyncData('article', async (nuxtApp) => {
 const entry = data.value.items[0]
 const articleBody = entry.fields.articleBody
 const entryHTML = useNuxtApp().$mdit.render(articleBody) || articleBody
+const metaDescription = articleBody.substring(0, 100).replace(/\r?\n/g, '').replace(/#/g, '') + '...'
+const uri = useRoute().path
 
 useHead({
   title: entry.fields.title,
@@ -30,8 +32,14 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: articleBody.substring(0, 100).replace(/\r?\n/g, '').replace(/#/g, '') + '...',
+      content: metaDescription,
     },
+    { hid: 'og:type', property: 'og:type', content: 'article' },
+    { hid: 'og:title', property: 'og:title', content: entry.fields.title },
+    { hid: 'og:description', property: 'og:description', content: metaDescription },
+    { hid: 'og:url', property: 'og:url', content: `${config.public.HOST}${uri}` },
+    { hid: 'og:image', property: 'og:image', content: `https:${entry.fields.coverArt.fields.file.url}` },
+    { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
   ],
 })
 

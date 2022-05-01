@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     public: {
       compression: true,
       DEFAULT_LANGUAGE: 'ja',
+      HOST: process.env.NODE_ENV === 'production' ? 'https://longrun-engineer-blog.web.app' : 'http://localhost:3000',
       APP_NAME: 'tech-blog-vue3-nuxt3',
       APP_URL: 'https://github.com/longrun/tech-blog-vue3-nuxt3',
       SITE_TITLE: 'LongRun Engineering',
