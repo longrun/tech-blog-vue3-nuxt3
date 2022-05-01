@@ -25,7 +25,7 @@ const avatarImageURL =
 */
 const author = 'y-takebe'
 const avatarSize = '36px'
-const avatarImageURL = '/images/avatar/yuichi-takebe.jpg'
+const avatarImageURL = '/images/avatar/yuichi-takebe-w72.jpg'
 
 const categoryTitle = props.category && props.category !== '__hide__' ? upperFirst(camelCase(props.category)) : null
 const createdAt = useLocaleDate(new Date(props.createdAt))
@@ -40,7 +40,7 @@ const createdAt = useLocaleDate(new Date(props.createdAt))
         :src="avatarImageURL"
         :alt="`${author}'s avatar`"
       />
-      <div class="align-items-center ml-2 pt-1 text-600">
+      <div class="align-items-center ml-2 pt-1 text-700">
         <span class="text-sm">{{ author }}</span>
         <span class="text-400"> &bull; </span>
         <time class="text-sm" datetime="props.createdAt">{{ createdAt }}</time>
