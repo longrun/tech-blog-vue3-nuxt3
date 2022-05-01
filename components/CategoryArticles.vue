@@ -47,7 +47,7 @@ useHead({
         <div class="col-6">
           <a class="img" :href="`/article/${entry.fields.slug}`">
             <img
-              :src="entry.fields.coverArt.fields.file.url"
+              :src="entry.fields.coverArt.fields.file.url + '?w=394&h=232&fit=thumb'"
               :alt="entry.fields.coverArt.fields.title"
               class="w-full border-round"
             />

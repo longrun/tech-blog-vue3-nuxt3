@@ -44,21 +44,21 @@ onMounted(() => {
 
 <template>
   <div>
+    <header class="my-3 px-3">
+      <h1 class="text-4xl">
+        {{ entry.fields.title }}
+      </h1>
+      <ArticleMeta :created-at="entry.sys.createdAt" :category="entry.metadata.tags[0].sys.id" />
+      <aside>
+        <ShareTo />
+      </aside>
+    </header>
     <img
       :src="entry.fields.coverArt.fields.file.url"
       :alt="entry.fields.coverArt.fields.title"
       class="w-screen md:w-full border-round"
     />
     <main class="article__main m-0 p-4">
-      <header>
-        <h1 class="text-4xl">
-          {{ entry.fields.title }}
-        </h1>
-        <ArticleMeta :created-at="entry.sys.createdAt" :category="entry.metadata.tags[0].sys.id" />
-      </header>
-      <aside>
-        <ShareTo />
-      </aside>
       <section>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <article class="article__body" v-html="entryHTML"></article>
