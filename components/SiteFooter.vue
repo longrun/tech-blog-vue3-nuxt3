@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { version } from '../package.json'
 
-const teamLogo = useRuntimeConfig().public.TEAM_LOGO_IMAGE_ON_FOOTER_
+// You should put on the file in `~/public/` if path start with '/'.
+const teamLogo = useRuntimeConfig().public.TEAM_LOGO_IMAGE_ON_FOOTER
 </script>
 
 <template>
