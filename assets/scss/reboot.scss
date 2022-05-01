@@ -33,13 +33,3 @@ a:hover {
   opacity: 0.87;
 }
 
-$primary-graident: linear-gradient(to right, #43D891, #3F82D1);
-$secondary-graident: linear-gradient(to right, #FFB800, #FF8A00);
-
-.bg-primary-gradieht {
-  background: $primary-graident;
-}
-
-.bg-secondary-gradieht {
-  background: $secondary-graident;
-}

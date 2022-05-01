@@ -15,9 +15,9 @@ export default defineNuxtConfig({
     'primeflex/themes/saga-blue.css',
     'primeicons/primeicons.css',
     'prism-themes/themes/prism-vsc-dark-plus.min.css',
-    'assets/scss/custom-utilities.scss',
-    'assets/scss/team-theme.scss',
+    'assets/scss/custom-primeflex.scss',
     'assets/scss/reboot.scss',
+    'assets/scss/team-theme.scss',
   ],
   plugins: [{ src: 'prismjs/prism.js', mode: 'server' }],
   runtimeConfig: {
