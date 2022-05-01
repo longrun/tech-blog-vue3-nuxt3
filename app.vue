@@ -3,7 +3,8 @@ const config = useRuntimeConfig()
 useHead({
   titleTemplate: `%s - ${config.SITE_TITLE}`,
   htmlAttrs: {
-    lang: config.public.DEFAUTL_LANGUAGE,
+    lang: 'ja',
+    prefix: 'og: http://ogp.me/ns#',
   },
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
