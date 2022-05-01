@@ -14,13 +14,14 @@
 
 # Set up Contentful
 
-Its Content model setting example in this project.
+Content model setting example in this project.
 
 <img width="814" alt="contentful-content-model" src="https://user-images.githubusercontent.com/15245958/164967460-7ae9d188-79e6-44e1-b8e0-6b63dd1d21d0.png">
 
-Its Tag setting example in in this project.
+Tag setting example in in this project. Navigation sort order can controlled by `:order=NUM`.
 
-<img width="1174" alt="contentful-tag" src="https://user-images.githubusercontent.com/15245958/164967463-b7838cff-00f9-4817-aa4a-dd3259e4076f.png">
+<img width="1228" alt="contentful-tag" src="https://user-images.githubusercontent.com/15245958/166130793-e18c8cd8-3ff5-4acd-a029-34a8b24ebc32.png">
+
 
 # Setup env and configuration
 
