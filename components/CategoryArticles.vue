@@ -30,6 +30,9 @@ const entryCount = items.length
 const { t } = useI18n()
 useHead({
   title: t('category_headline', { category: categoryTitle }),
+  meta: [
+    { hid: 'description', name: 'description', content: t('category_meta_description', { category: categoryTitle }) },
+  ],
 })
 </script>
 

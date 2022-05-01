@@ -21,10 +21,18 @@ const { data } = await useAsyncData('article', async (nuxtApp) => {
   })
 })
 const entry = data.value.items[0]
-const entryHTML = useNuxtApp().$mdit.render(entry.fields.articleBody) || entry
+const articleBody = entry.fields.articleBody
+const entryHTML = useNuxtApp().$mdit.render(articleBody) || articleBody
 
 useHead({
   title: entry.fields.title,
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: articleBody.substring(0, 100).replace(/\r?\n/g, '').replace(/#/g, '') + '...',
+    },
+  ],
 })
 
 onMounted(() => {

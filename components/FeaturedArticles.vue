@@ -8,8 +8,10 @@ const { data } = await useAsyncData('entries', async (nuxtApp) => {
 })
 const items = data.value.items
 
+const config = useRuntimeConfig()
 useHead({
-  title: useRuntimeConfig().public.TEAM_STATEMENT,
+  title: config.public.TEAM_STATEMENT,
+  meta: [{ hid: 'description', name: 'description', content: config.public.SITE_TOP_DESCRIPTION }],
 })
 </script>
 
@@ -26,8 +28,8 @@ useHead({
           <img
             :src="entry.fields.coverArt.fields.file.url"
             :alt="entry.fields.coverArt.fields.title"
-            class="max-w-full"
-            loading="lazy"
+            class="max-w-full border-round"
+            :loading="i > 0 ? 'lazy' : undefined"
           />
         </a>
         <h1 v-if="i === 0" class="text-4xl">

@@ -33,6 +33,8 @@ export default defineNuxtConfig({
       APP_NAME: 'tech-blog-vue3-nuxt3',
       APP_URL: 'https://github.com/longrun/tech-blog-vue3-nuxt3',
       SITE_TITLE: 'LongRun Engineering',
+      SITE_TOP_DESCRIPTION:
+        'ロンランのエンジニアチームによるストーリー。テック・スタートアップ創業期からの技術と文化について、さまざまな情報をお届けします。',
       TEAM_NAME: 'LongRun Inc.',
       TEAM_WEBSITE_URL: 'https://longmayyou.run',
       TEAM_STATEMENT: 'ランナーが諦めなくていい世界をつくる',
