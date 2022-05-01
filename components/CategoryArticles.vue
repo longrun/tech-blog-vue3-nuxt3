@@ -42,7 +42,7 @@ useHead({
     {
       hid: 'og:image',
       property: 'og:image',
-      content: `${config.public.HOST}${config.public.TEAM_LOGO_IMAGE_ON_FOOTER}`,
+      content: `${config.public.HOST}${config.public.TEAM_LOGO_BLACK}`,
     },
     { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
   ],
