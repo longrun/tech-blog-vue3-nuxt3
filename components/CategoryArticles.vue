@@ -42,11 +42,13 @@ useHead({
     <article v-for="entry in items" :key="entry.sys.id">
       <div class="grid">
         <div class="col-6">
-          <img
-            :src="entry.fields.coverArt.fields.file.url"
-            :alt="entry.fields.coverArt.fields.title"
-            class="w-full border-round"
-          />
+          <a class="img" :href="`/article/${entry.fields.slug}`">
+            <img
+              :src="entry.fields.coverArt.fields.file.url"
+              :alt="entry.fields.coverArt.fields.title"
+              class="w-full border-round"
+            />
+          </a>
         </div>
         <div class="col-6">
           <h2>

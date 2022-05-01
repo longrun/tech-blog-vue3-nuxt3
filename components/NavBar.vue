@@ -19,7 +19,7 @@ const tags = data.value.items
 </script>
 
 <template>
-  <nav class="nav__categories flex flex-wrap py-2 px-4">
+  <nav class="nav__categories flex flex-wrap py-2 px-4 shadow-1 mb-4">
     <div v-for="tag in tags" :key="tag.id" class="p-2 mr-2 flex-start">
       <a :href="`/category/${tag.id}`">{{ tag.title }}</a>
     </div>
