@@ -22,12 +22,14 @@ useHead({
         :class="['col-12', i > 0 ? 'md:col-6' : undefined]"
         class="mb-5"
       >
-        <img
-          :src="entry.fields.coverArt.fields.file.url"
-          :alt="entry.fields.coverArt.fields.title"
-          class="w-full border-round"
-          loading="lazy"
-        />
+        <a class="img" :href="`/article/${entry.fields.slug}`">
+          <img
+            :src="entry.fields.coverArt.fields.file.url"
+            :alt="entry.fields.coverArt.fields.title"
+            class="w-full border-round"
+            loading="lazy"
+          />
+        </a>
         <h1 v-if="i === 0" class="text-4xl">
           <a :href="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}

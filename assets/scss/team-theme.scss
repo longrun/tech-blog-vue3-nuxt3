@@ -3,3 +3,11 @@
   --text-color-secondary: rgb(117, 117, 117);
   --primary-color: #059ad3;
 }
+
+a.img:hover {
+  opacity: 0.96;
+}
+
+label.cateogry-label__bgcolor {
+  background: linear-gradient(to right, #43D891, #3F82D1);
+}
