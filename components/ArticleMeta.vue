@@ -25,7 +25,7 @@ const avatarImageURL =
 */
 const author = 'y-takebe'
 const avatarSize = '36px'
-const avatarImageURL = '//longmayyou.run/images/team/yuichi-takebe.jpg'
+const avatarImageURL = '/images/avatar/yuichi-takebe.jpg'
 
 const categoryTitle = props.category && props.category !== '__hide__' ? upperFirst(camelCase(props.category)) : null
 const createdAt = useLocaleDate(new Date(props.createdAt))
