@@ -25,7 +25,7 @@ const tags = data.value.items
     </div>
     <div class="mx-auto" />
     <div class="flex align-items-center">
-      <a class="ghicon" ref="noopener noreferrer" :href="$config.GITHUB_ORGANIZATION_URL" target="_blank"
+      <a class="ghicon" ref="noopener noreferrer" :href="$config.GITHUB_ORGANIZATION_URL" target="_blank" title="GitHub"
         ><i class="pi pi-github text-2xl" />
       </a>
     </div>
