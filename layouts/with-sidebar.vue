@@ -2,11 +2,11 @@
   <div>
     <SiteHeader />
     <NavBar />
-    <div class="grid grid-nogutter mx-auto" style="width: 1200px">
+    <div class="grid grid-nogutter mx-auto" style="max-width: 1200px">
       <div class="col">
         <NuxtPage />
       </div>
-      <aside class="col-fixed" style="width: 320px">
+      <aside class="col-fixed" style="max-width: 320px">
         <PopularArticles />
       </aside>
     </div>

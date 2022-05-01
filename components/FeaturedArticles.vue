@@ -26,7 +26,7 @@ useHead({
           <img
             :src="entry.fields.coverArt.fields.file.url"
             :alt="entry.fields.coverArt.fields.title"
-            class="w-full border-round"
+            class="max-w-full"
             loading="lazy"
           />
         </a>
