@@ -5,7 +5,7 @@ nuxt.d.ts
 .output
 .env
 .DS_Store
-.github
+.github/workflows/firebase-*.yml
 .firebase
 .firebaserc
 firebase.json
