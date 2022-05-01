@@ -8,9 +8,8 @@ const { data } = await useAsyncData('entries', async (nuxtApp) => {
 })
 const items = data.value.items
 
-const config = useRuntimeConfig()
 useHead({
-  title: config.public.TEAM_STATEMENT,
+  title: useRuntimeConfig().public.TEAM_STATEMENT,
 })
 </script>
 

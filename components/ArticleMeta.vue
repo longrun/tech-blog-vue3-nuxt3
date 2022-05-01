@@ -2,6 +2,10 @@
 import upperFirst from 'lodash.upperFirst'
 import camelCase from 'lodash.camelCase'
 
+/**
+ * Define props
+ */
+
 interface Props {
   // author: string;
   // avatarSize: string;
@@ -11,6 +15,7 @@ interface Props {
 }
 const props = defineProps<Props>()
 
+// ----------------------------------------------------------------------------
 // TODO dynamic set up
 /*
 const author = props.author || "y-takebe";

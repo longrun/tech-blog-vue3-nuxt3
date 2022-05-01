@@ -1,11 +1,15 @@
 <script lang="ts" setup>
 import Prism from 'prismjs'
 
+/**
+ * Define props
+ */
 interface Props {
   articleId: string
 }
 const props = defineProps<Props>()
 
+// ----------------------------------------------------------------------------
 const config = useRuntimeConfig()
 
 const { data } = await useAsyncData('article', async (nuxtApp) => {
