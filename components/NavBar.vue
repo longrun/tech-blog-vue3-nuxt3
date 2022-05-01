@@ -1,17 +1,15 @@
 <script lang="ts" setup>
-// TODO change to dynamic set up https://github.com/longrun/tech-blog-vue3-nuxt3/issues/4
-const navLinks = [
-  { tagid: 'development', title: 'Development' },
-  { tagid: 'operation', title: 'Operation' },
-  { tagid: 'cafebreak', title: 'CafeBreak☕️' },
-  { tagid: 'culture', title: 'Culture🦄' },
-]
+const { data } = await useAsyncData('tags', async (nuxtApp) => {
+  const { $contentfulClient } = nuxtApp
+  return $contentfulClient.getTags()
+})
+const tags = data.value.items
 </script>
 
 <template>
   <nav class="nav__categories flex flex-wrap py-2 px-4">
-    <div v-for="navLink in navLinks" :key="navLink.tagid" class="p-2 mr-2 flex-start">
-      <a :href="`/category/${navLink.tagid}`">{{ navLink.title }}</a>
+    <div v-for="tag in tags" :key="tag.sys.id" class="p-2 mr-2 flex-start">
+      <a :href="`/category/${tag.sys.id}`">{{ tag.name }}</a>
     </div>
     <div class="mx-auto" />
     <div class="flex align-items-center">
