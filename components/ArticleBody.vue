@@ -52,8 +52,8 @@ onMounted(() => {
 
 <template>
   <div>
-    <header class="my-3 px-3">
-      <h1 class="text-4xl">
+    <header class="mt-3 mb-5 px-3">
+      <h1 class="text-3xl">
         {{ entry.fields.title }}
       </h1>
       <ArticleMeta :created-at="entry.sys.createdAt" :category="entry.metadata.tags[0].sys.id" />
@@ -66,7 +66,7 @@ onMounted(() => {
       :alt="entry.fields.coverArt.fields.title"
       class="w-screen md:w-full border-round"
     />
-    <main class="article__main m-0 p-4">
+    <main class="article__main m-0 p-3">
       <section>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <article class="article__body" v-html="entryHTML"></article>
@@ -98,7 +98,7 @@ onMounted(() => {
     border-style: solid;
     border-width: 0 0 1px 0;
     border-color: var(--bluegray-100);
-    font-size: 1.75rem;
+    font-size: 1.5rem; /* primeflex text-2xl */
   }
 
   img {
@@ -116,10 +116,9 @@ onMounted(() => {
     white-space: pre;
     overflow: scroll;
     display: block;
-    width: calc(100% - 64px);
 
     code {
-      width: calc(100% - 64px);
+      width: calc(100% - 50px);
     }
   }
 }

@@ -7,25 +7,21 @@ import camelCase from 'lodash.camelCase'
  */
 
 interface Props {
-  // author: string;
-  // avatarSize: string;
-  // avatarImageURL: string;
+  author: string
+  avatarSize: string
+  avatarImageURL: string
   createdAt: string
   category: string
 }
-const props = defineProps<Props>()
+
+// TODO
+const props = withDefaults(defineProps<Props>(), {
+  author: 'y-takebe',
+  avatarSize: '36px',
+  avatarImageURL: '/images/avatar/yuichi-takebe-w72.jpg',
+})
 
 // ----------------------------------------------------------------------------
-// TODO dynamic set up
-/*
-const author = props.author || "y-takebe";
-const avatarSize = props.avatarSize || "36px";
-const avatarImageURL =
-  props.avatarImageURL || "//longmayyou.run/images/team/yuichi-takebe.jpg";
-*/
-const author = 'y-takebe'
-const avatarSize = '36px'
-const avatarImageURL = '/images/avatar/yuichi-takebe-w72.jpg'
 
 const categoryTitle = props.category && props.category !== '__hide__' ? upperFirst(camelCase(props.category)) : null
 const createdAt = useLocaleDate(new Date(props.createdAt))

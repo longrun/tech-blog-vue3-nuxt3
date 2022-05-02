@@ -28,7 +28,7 @@ useHead({
 </script>
 
 <template>
-  <main class="featured-articles m-0 p-4">
+  <main class="featured-articles m-0 p-3">
     <div class="grid">
       <article
         v-for="(entry, i) in items"
@@ -44,12 +44,12 @@ useHead({
             :loading="i > 0 ? 'lazy' : undefined"
           />
         </a>
-        <h1 v-if="i === 0" class="text-4xl">
+        <h1 v-if="i === 0" class="text-3xl">
           <a :href="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}
           </a>
         </h1>
-        <h2 v-else>
+        <h2 v-else class="text-2xl">
           <a :href="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}
           </a>

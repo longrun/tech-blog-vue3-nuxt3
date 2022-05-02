@@ -50,7 +50,7 @@ useHead({
 </script>
 
 <template>
-  <main class="category-articles m-0 py-6 px-6">
+  <main class="category-articles p-3">
     <h1>{{ $t('category_headline', { category: categoryTitle }) }}</h1>
     <p v-if="entryCount === 0">{{ $t('category_article_empty_state') }}</p>
     <p v-else>{{ $t('category_article_count', { count: entryCount }) }}</p>
@@ -67,12 +67,12 @@ useHead({
           </a>
         </div>
         <div class="col-6">
-          <h2>
+          <h2 class="text-xl mt-0">
             <a :href="`/article/${entry.fields.slug}`">
               {{ entry.fields.title }}
             </a>
           </h2>
-          <ArticleMeta :created-at="entry.sys.createdAt" category="__hide__" />
+          <ArticleMeta :created-at="entry.sys.createdAt" category="__hide__" avatarSize="24" />
         </div>
       </div>
     </article>
