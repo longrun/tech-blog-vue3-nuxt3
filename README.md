@@ -6,9 +6,10 @@
 - Tools: Vite, Yarn 3, Volar
 - Styles: [Primeflex](https://www.primefaces.org/primeflex/), [Primeicons](https://github.com/primefaces/primeicons), [markdown-it](https://github.com/markdown-it/markdown-it)
 
-## feature
+## Features
 
 - Simple and clean content
+- Article is can wrote Markdown 
 - Responsive layout for PC, Tablet, Smartphone
 - Lighthouse Hi-score
 - Perfect OGP resources setup
