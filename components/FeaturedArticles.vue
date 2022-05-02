@@ -38,7 +38,7 @@ useHead({
       >
         <a class="img" :href="`/article/${entry.fields.slug}`">
           <img
-            :src="entry.fields.coverArt.fields.file.url"
+            :src="`${entry.fields.coverArt.fields.file.url}?fm=webp`"
             :alt="entry.fields.coverArt.fields.title"
             class="max-w-full border-round"
             :loading="i > 0 ? 'lazy' : undefined"

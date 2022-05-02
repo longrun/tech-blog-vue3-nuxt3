@@ -60,7 +60,7 @@ useHead({
         <div class="col-6">
           <a class="img" :href="`/article/${entry.fields.slug}`">
             <img
-              :src="entry.fields.coverArt.fields.file.url + '?w=394&h=232&fit=thumb'"
+              :src="`${entry.fields.coverArt.fields.file.url}?w=426&q=95&fit=thumb`"
               :alt="entry.fields.coverArt.fields.title"
               class="w-full border-round"
             />
@@ -72,7 +72,7 @@ useHead({
               {{ entry.fields.title }}
             </a>
           </h2>
-          <ArticleMeta :created-at="entry.sys.createdAt" category="__hide__" avatarSize="24" />
+          <ArticleMeta :created-at="entry.sys.createdAt" category="__hide__" avatarSize="32px" />
         </div>
       </div>
     </article>

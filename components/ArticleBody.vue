@@ -62,7 +62,7 @@ onMounted(() => {
       </aside>
     </header>
     <img
-      :src="entry.fields.coverArt.fields.file.url"
+      :src="`${entry.fields.coverArt.fields.file.url}?fm=webp`"
       :alt="entry.fields.coverArt.fields.title"
       class="w-screen md:w-full border-round"
     />
