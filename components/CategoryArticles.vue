@@ -28,16 +28,29 @@ const categoryTitle = upperFirst(camelCase(props.categoryId))
 const entryCount = items.length
 
 const { t } = useI18n()
+const categoryHeadline = t('category_headline', { category: categoryTitle })
+const uri = useRoute().path
+
 useHead({
-  title: t('category_headline', { category: categoryTitle }),
+  title: categoryHeadline,
   meta: [
-    { hid: 'description', name: 'description', content: t('category_meta_description', { category: categoryTitle }) },
+    { hid: 'description', name: 'description', content: categoryHeadline },
+    { hid: 'og:type', property: 'og:type', content: 'website' },
+    { hid: 'og:title', property: 'og:title', content: categoryHeadline },
+    { hid: 'og:description', property: 'og:description', content: categoryHeadline },
+    { hid: 'og:url', property: 'og:url', content: `${config.public.HOST}${uri}` },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: `${config.public.HOST}${config.public.TEAM_LOGO_BLACK}`,
+    },
+    { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
   ],
 })
 </script>
 
 <template>
-  <main class="category-articles m-0 py-6 px-6">
+  <main class="category-articles p-3">
     <h1>{{ $t('category_headline', { category: categoryTitle }) }}</h1>
     <p v-if="entryCount === 0">{{ $t('category_article_empty_state') }}</p>
     <p v-else>{{ $t('category_article_count', { count: entryCount }) }}</p>
@@ -47,19 +60,19 @@ useHead({
         <div class="col-6">
           <a class="img" :href="`/article/${entry.fields.slug}`">
             <img
-              :src="entry.fields.coverArt.fields.file.url + '?w=394&h=232&fit=thumb'"
+              :src="`${entry.fields.coverArt.fields.file.url}?w=426&q=95&fit=thumb`"
               :alt="entry.fields.coverArt.fields.title"
               class="w-full border-round"
             />
           </a>
         </div>
         <div class="col-6">
-          <h2>
+          <h2 class="text-xl mt-0">
             <a :href="`/article/${entry.fields.slug}`">
               {{ entry.fields.title }}
             </a>
           </h2>
-          <ArticleMeta :created-at="entry.sys.createdAt" category="__hide__" />
+          <ArticleMeta :created-at="entry.sys.createdAt" category="__hide__" avatarSize="32px" />
         </div>
       </div>
     </article>

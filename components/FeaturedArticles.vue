@@ -11,12 +11,24 @@ const items = data.value.items
 const config = useRuntimeConfig()
 useHead({
   title: config.public.TEAM_STATEMENT,
-  meta: [{ hid: 'description', name: 'description', content: config.public.SITE_TOP_DESCRIPTION }],
+  meta: [
+    { hid: 'description', name: 'description', content: config.public.SITE_TOP_DESCRIPTION },
+    { hid: 'og:type', property: 'og:type', content: 'website' },
+    { hid: 'og:title', property: 'og:title', content: config.public.SITE_TITLE },
+    { hid: 'og:description', property: 'og:description', content: config.public.SITE_TOP_DESCRIPTION },
+    { hid: 'og:url', property: 'og:url', content: `${config.public.HOST}` },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: `${config.public.HOST}${config.public.TEAM_LOGO_BLACK}`,
+    },
+    { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
+  ],
 })
 </script>
 
 <template>
-  <main class="featured-articles m-0 p-4">
+  <main class="featured-articles m-0 p-3">
     <div class="grid">
       <article
         v-for="(entry, i) in items"
@@ -26,18 +38,18 @@ useHead({
       >
         <a class="img" :href="`/article/${entry.fields.slug}`">
           <img
-            :src="entry.fields.coverArt.fields.file.url"
+            :src="`${entry.fields.coverArt.fields.file.url}?fm=webp`"
             :alt="entry.fields.coverArt.fields.title"
             class="max-w-full border-round"
             :loading="i > 0 ? 'lazy' : undefined"
           />
         </a>
-        <h1 v-if="i === 0" class="text-4xl">
+        <h1 v-if="i === 0" class="text-3xl">
           <a :href="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}
           </a>
         </h1>
-        <h2 v-else>
+        <h2 v-else class="text-2xl">
           <a :href="`/article/${entry.fields.slug}`">
             {{ entry.fields.title }}
           </a>

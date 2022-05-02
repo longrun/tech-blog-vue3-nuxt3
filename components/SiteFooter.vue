@@ -3,9 +3,9 @@ import { version } from '../package.json'
 </script>
 
 <template>
-  <footer class="sitefooter text-center pt-6 pb-2">
+  <footer class="sitefooter text-center pb-2">
     <!-- You should put on the file in `~/public/` if path start with '/' -->
-    <img :src="$config.TEAM_LOGO_IMAGE_ON_FOOTER" style="width: 120px" :alt="$config.TEAM_NAME" class="mb-3" />
+    <img :src="$config.TEAM_LOGO_IMAGE_ON_FOOTER" style="width: 120px" :alt="$config.TEAM_NAME" class="my-5" />
     <div>{{ $config.TEAM_STATEMENT }}</div>
     <div class="my-3">
       &copy;

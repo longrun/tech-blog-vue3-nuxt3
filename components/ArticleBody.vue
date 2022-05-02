@@ -23,6 +23,8 @@ const { data } = await useAsyncData('article', async (nuxtApp) => {
 const entry = data.value.items[0]
 const articleBody = entry.fields.articleBody
 const entryHTML = useNuxtApp().$mdit.render(articleBody) || articleBody
+const metaDescription = articleBody.substring(0, 100).replace(/\r?\n/g, '').replace(/#/g, '') + '...'
+const uri = useRoute().path
 
 useHead({
   title: entry.fields.title,
@@ -30,8 +32,14 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: articleBody.substring(0, 100).replace(/\r?\n/g, '').replace(/#/g, '') + '...',
+      content: metaDescription,
     },
+    { hid: 'og:type', property: 'og:type', content: 'article' },
+    { hid: 'og:title', property: 'og:title', content: entry.fields.title },
+    { hid: 'og:description', property: 'og:description', content: metaDescription },
+    { hid: 'og:url', property: 'og:url', content: `${config.public.HOST}${uri}` },
+    { hid: 'og:image', property: 'og:image', content: `https:${entry.fields.coverArt.fields.file.url}` },
+    { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
   ],
 })
 
@@ -44,8 +52,8 @@ onMounted(() => {
 
 <template>
   <div>
-    <header class="my-3 px-3">
-      <h1 class="text-4xl">
+    <header class="mt-3 mb-5 px-3">
+      <h1 class="text-3xl">
         {{ entry.fields.title }}
       </h1>
       <ArticleMeta :created-at="entry.sys.createdAt" :category="entry.metadata.tags[0].sys.id" />
@@ -54,11 +62,11 @@ onMounted(() => {
       </aside>
     </header>
     <img
-      :src="entry.fields.coverArt.fields.file.url"
+      :src="`${entry.fields.coverArt.fields.file.url}?fm=webp`"
       :alt="entry.fields.coverArt.fields.title"
       class="w-screen md:w-full border-round"
     />
-    <main class="article__main m-0 p-4">
+    <main class="article__main m-0 p-3">
       <section>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <article class="article__body" v-html="entryHTML"></article>
@@ -90,7 +98,7 @@ onMounted(() => {
     border-style: solid;
     border-width: 0 0 1px 0;
     border-color: var(--bluegray-100);
-    font-size: 1.75rem;
+    font-size: 1.5rem; /* primeflex text-2xl */
   }
 
   img {
@@ -108,10 +116,9 @@ onMounted(() => {
     white-space: pre;
     overflow: scroll;
     display: block;
-    width: calc(100% - 64px);
 
     code {
-      width: calc(100% - 64px);
+      width: calc(100% - 50px);
     }
   }
 }
