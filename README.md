@@ -6,6 +6,22 @@
 - Tools: Vite, Yarn 3, Volar
 - Styles: [Primeflex](https://www.primefaces.org/primeflex/), [Primeicons](https://github.com/primefaces/primeicons), [markdown-it](https://github.com/markdown-it/markdown-it)
 
+## feature
+
+- Simple and clean content
+- Responsive layout for PC, Tablet, Smartphone
+- Lighthouse Hi-score
+- Perfect OGP resources setup
+- Support i18n
+- Support Google Analytics 4
+- of course, No Ad!
+
+Top Page | Article Page
+-- | --
+<img width="1345" alt="スクリーンショット 2022-05-02 10 23 02" src="https://user-images.githubusercontent.com/15245958/166173789-cca850d3-80f7-4586-b887-bf85e599c114.png"> | <img width="1354" alt="スクリーンショット 2022-05-02 10 22 43" src="https://user-images.githubusercontent.com/15245958/166173807-295251e7-ac2c-490f-8f53-96af00d348b5.png">
+<img width="759" alt="スクリーンショット 2022-05-02 10 16 52" src="https://user-images.githubusercontent.com/15245958/166173629-f6bf71b4-2e6b-4f5c-91b8-6eac17ed7f8b.png"> | <img width="773" alt="スクリーンショット 2022-05-02 10 18 13" src="https://user-images.githubusercontent.com/15245958/166173633-80dc1607-038d-45be-a50b-f2c3c5a9cb43.png">
+
+
 # Init
 
 - Install Node.js (recommend v16.14.2^)
