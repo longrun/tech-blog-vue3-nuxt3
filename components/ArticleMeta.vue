@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import upperFirst from 'lodash.upperFirst'
-import camelCase from 'lodash.camelCase'
+import upperFirst from 'lodash.upperfirst'
+import camelCase from 'lodash.camelcase'
 
 /**
  * Define props
