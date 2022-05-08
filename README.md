@@ -1,7 +1,9 @@
 # Tech blog starter-kit with vue3, nuxt3 and Contentful
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c6e1d7a1-6034-4312-9255-452c9e725b7e/deploy-status)](https://app.netlify.com/sites/delicate-custard-cc73d3/deploys)
+
 - Vue3 - using [setup script](https://vuejs.org/api/sfc-script-setup.html)
-- Nuxt3
+- Nuxt3 - v3.0.0-rc.2
 - TypeScript
 - Tools: Vite, Yarn 3, Volar
 - Styles: [Primeflex](https://www.primefaces.org/primeflex/), [Primeicons](https://github.com/primefaces/primeicons), [markdown-it](https://github.com/markdown-it/markdown-it)
@@ -37,8 +39,7 @@ Content model setting example in this project.
 
 Tag setting example in in this project. Navigation sort order can controlled by `:order=NUM`.
 
-<img width="1228" alt="contentful-tag" src="https://user-images.githubusercontent.com/15245958/166130793-e18c8cd8-3ff5-4acd-a029-34a8b24ebc32.png">
-
+<img width="1388" alt="contentful-tag" src="https://user-images.githubusercontent.com/15245958/167295104-ef86cd2b-620f-414b-a9be-c349f7315a8c.png">
 
 # Setup env and configuration
 
