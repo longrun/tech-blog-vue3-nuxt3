@@ -4,23 +4,13 @@ const { data } = await useAsyncData('tags', async (nuxtApp) => {
   return $contentfulClient.getTags()
 })
 
-const tags = data.value.items
-  .map((tag) => {
-    const [title, order_str] = tag.name.split(':')
-    const found = order_str.match('^order=([0-9]+)$')
-    const order = found ? parseInt(found[1]) : 0
-    return {
-      id: tag.sys.id,
-      title: title,
-      order: order,
-    }
-  })
-  .sort((a, b) => a.order - b.order)
+const { $tagParser } = useNuxtApp()
+const tags = $tagParser(data.value.items)
 </script>
 
 <template>
   <nav class="nav__categories flex flex-wrap py-2 px-3 shadow-1 mb-4">
-    <div v-for="tag in tags" :key="tag.id" class="p-2 mr-2 flex-start">
+    <div v-for="tag in tags" :key="tag.id" class="p-2 mr-2 flex-start" :class="`category-${tag.id}`">
       <a :href="`/category/${tag.id}`">{{ tag.title }}</a>
     </div>
     <div class="mx-auto" />
