@@ -9,3 +9,4 @@ nuxt.d.ts
 .firebase
 .firebaserc
 firebase.json
+dist
