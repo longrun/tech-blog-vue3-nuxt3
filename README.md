@@ -1,11 +1,14 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c6e1d7a1-6034-4312-9255-452c9e725b7e/deploy-status)](https://app.netlify.com/sites/delicate-custard-cc73d3/deploys)
 
-# Tech blog starter-kit with vue3, nuxt3 and Contentful
+# Tech blog starter-kit with Vue 3, Nuxt 3 and Contentful
 
-- Vue3 - Every .vue files are written in [setup script](https://vuejs.org/api/sfc-script-setup.html)
-- Nuxt3 - using v3.0.0-rc.2
+- Vue 3
+    - Every .vue files are written in [setup script](https://vuejs.org/api/sfc-script-setup.html)
+- Nuxt 3
+     - Using latest version, v3.0.0-rc.2
+     - Compliance the Nuxt 3 standard directory structure
 - TypeScript
-- Contentful
+- Contentful for BFF
 - Tools: Vite, Yarn 3, Volar
 - Styles: [Primeflex](https://www.primefaces.org/primeflex/), [Primeicons](https://github.com/primefaces/primeicons), [markdown-it](https://github.com/markdown-it/markdown-it)
 
