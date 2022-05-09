@@ -20,6 +20,7 @@ Minimal features.
 - Simple and clean markup and styling
 - Article is can wrote Markdown 
 - Responsive layout for PC, Tablet, Smartphone
+- Image optimization - support WebP format / image lazy load
 - Lighthouse Hi-score
 - Perfect OGP resources setup
 - Support i18n
