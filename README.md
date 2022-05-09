@@ -1,16 +1,19 @@
-# Tech blog starter-kit with vue3, nuxt3 and Contentful
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c6e1d7a1-6034-4312-9255-452c9e725b7e/deploy-status)](https://app.netlify.com/sites/delicate-custard-cc73d3/deploys)
 
-- Vue3 - using [setup script](https://vuejs.org/api/sfc-script-setup.html)
-- Nuxt3 - v3.0.0-rc.2
+# Tech blog starter-kit with vue3, nuxt3 and Contentful
+
+- Vue3 - Every .vue files are written in [setup script](https://vuejs.org/api/sfc-script-setup.html)
+- Nuxt3 - using v3.0.0-rc.2
 - TypeScript
+- Contentful
 - Tools: Vite, Yarn 3, Volar
 - Styles: [Primeflex](https://www.primefaces.org/primeflex/), [Primeicons](https://github.com/primefaces/primeicons), [markdown-it](https://github.com/markdown-it/markdown-it)
 
 ## Features
 
-- Simple and clean content
+Minimal features.
+
+- Simple and clean markup and styling
 - Article is can wrote Markdown 
 - Responsive layout for PC, Tablet, Smartphone
 - Lighthouse Hi-score
@@ -51,6 +54,12 @@ CONTENTFUL_SPACE_ID=<your contentful space id>
 CONTENTFUL_ACCESS_TOKEN=<your contentful access token>
 ```
 
+If you want Google Analytics, write GA_ID.
+
+```
+GA_ID=<your google analitycs tracking-id like G-XXXXXXXXX>
+```
+
 # Change your site setting
 
 Change site settings in the nuxt.config.ts to yours.
@@ -61,16 +70,19 @@ Change site settings in the nuxt.config.ts to yours.
       ...
     },
     public: {
+      compression: true,
       DEFAUTL_LANGUAGE: 'ja',
+      HOST: process.env.NODE_ENV === 'production' ? 'https://longrun-engineer-blog.web.app' : 'http://localhost:3000',
       APP_NAME: 'tech-blog-vue3-nuxt3',
       APP_URL: 'https://github.com/longrun/tech-blog-vue3-nuxt3',
-      BLOG_SITE_TITLE: 'LongRun Engineering',
+      SITE_TITLE: 'LongRun Engineering',
+      SITE_TOP_DESCRIPTION: 'Our story begins here.',
       TEAM_NAME: 'LongRun Inc.',
       TEAM_WEBSITE_URL: 'https://longmayyou.run',
       TEAM_STATEMENT: 'Creating a world where runners don\'t have to give up',
       TEAM_LOGO_IMAGE_ON_FOOTER: '/images/logo-white-bg_transparent-465x195.png',
+      TEAM_LOGO_BLACK: '/images/longrun-logo-black-600x315.png',
       GITHUB_ORGANIZATION_URL: 'https://github.com/longrun',
-      GA_APP_NAME: 'LongRun Blog',
       GA_ID: process.env.GA_ID,
       GA_APP_NAME: 'LongRun Blog',
     },
