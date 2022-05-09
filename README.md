@@ -7,6 +7,7 @@
 - Nuxt 3
      - Using latest version, v3.0.0-rc.2
      - Compliance the Nuxt 3 standard directory structure
+     - You can choose SSR or SSG, whichever you prefer!
 - TypeScript
 - Contentful for BFF
 - Tools: Vite, Yarn 3, Volar
@@ -123,6 +124,23 @@ yarn generate
 
 And you can find more deployment information from https://nuxtjs.org/deployments/
 
+# Build for SSR
+
+Check config is equals to `ssr:true` and `target:server` in `nuxt.config.ts`.
+
+```
+export default defineNuxtConfig({
+  ssr: true,
+  target: 'server',
+  ...
+```
+
+Build and start local server.
+
+```
+yarn build
+yarn start
+```
 
 # Package upgrade
 
