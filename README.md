@@ -5,7 +5,7 @@
 - Vue 3
     - Every .vue files are written in [setup script](https://vuejs.org/api/sfc-script-setup.html)
 - Nuxt 3
-     - Using latest version, v3.0.0-rc.3
+     - Using latest version, v3.0.0-rc.4
      - Compliance the Nuxt 3 standard directory structure
      - You can choose SSR or SSG, whichever you prefer!
 - TypeScript
