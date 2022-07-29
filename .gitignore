@@ -1,12 +1,35 @@
-node_modules
-*.log
+# mac
+.DS_Store
+
+# secret
+.env
+
+# nuxt
 .nuxt
 nuxt.d.ts
-.output
-.env
-.DS_Store
-.github/workflows/firebase-*.yml
+
+# firebase
 .firebase
 .firebaserc
+.github/workflows/firebase-*.yml
 firebase.json
+
+# node
+node_modules
+
+# build
+.output
 dist
+
+# log
+*.log
+
+# yarn
+.yarn/*
+*/.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.yarn/install-state.gz
