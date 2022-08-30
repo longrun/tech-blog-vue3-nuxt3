@@ -6,6 +6,9 @@ const { data } = await useAsyncData('tags', async (nuxtApp) => {
 
 const { $tagParser } = useNuxtApp()
 const tags = $tagParser(data.value.items)
+
+const { $assertion } = useNuxtApp()
+$assertion.assertTags(tags)
 </script>
 
 <template>
