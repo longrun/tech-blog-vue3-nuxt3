@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { data } = await useAsyncData('tags', async (nuxtApp) => {
   const { $contentfulClient } = nuxtApp
-  return $contentfulClient.getTags()
+  return await $contentfulClient.getTags()
 })
 
 const { $tagParser } = useNuxtApp()
