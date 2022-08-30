@@ -6,7 +6,11 @@ const { data } = await useAsyncData('entries', async (nuxtApp) => {
     limit: 10,
   })
 })
+
 const items = data.value.items
+
+const { $assertion } = useNuxtApp()
+$assertion.assertEntries(items)
 
 const config = useRuntimeConfig()
 useHead({

@@ -20,7 +20,13 @@ const { data } = await useAsyncData('article', async (nuxtApp) => {
     limit: 1,
   })
 })
-const entry = data.value.items[0]
+
+const items = data.value.items
+
+const { $assertion } = useNuxtApp()
+$assertion.assertEntries(items)
+
+const entry = items[0]
 const articleBody = entry.fields.articleBody
 const entryHTML = useNuxtApp().$mdit.render(articleBody) || articleBody
 const metaDescription = articleBody.substring(0, 100).replace(/\r?\n/g, '').replace(/#/g, '') + '...'
