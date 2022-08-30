@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { data } = await useAsyncData('entries', async (nuxtApp) => {
   const { $contentfulClient } = nuxtApp
-  return $contentfulClient.getEntries({
+  return await $contentfulClient.getEntries({
     order: '-sys.createdAt',
     limit: 10,
   })
