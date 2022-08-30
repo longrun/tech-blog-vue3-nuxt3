@@ -14,7 +14,7 @@ const config = useRuntimeConfig()
 
 const { data } = await useAsyncData('article', async (nuxtApp) => {
   const { $contentfulClient } = nuxtApp
-  return $contentfulClient.getEntries({
+  return await $contentfulClient.getEntries({
     content_type: config.private.CONTENTFUL_CONTENT_KEY,
     'fields.slug[in]': props.articleId,
     limit: 1,

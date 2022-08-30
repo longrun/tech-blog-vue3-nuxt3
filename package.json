@@ -11,21 +11,21 @@
     "prettier": "prettier --check '**/*.{js,ts,vue}'"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
-    "@typescript-eslint/parser": "^5.31.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.0",
+    "@typescript-eslint/parser": "^5.36.0",
     "@vue/eslint-config-typescript": "^10.0.0",
-    "eslint": "^8.20.0",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^8.7.1",
-    "nuxt": "3.0.0-rc.6",
+    "nuxt": "3.0.0-rc.8",
     "prettier": "^2.7.1",
-    "sass": "^1.54.0",
+    "sass": "^1.54.6",
     "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-eslint": "^1.7.0"
+    "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
     "@nuxt-modules/compression": "^0.1.0",
-    "contentful": "^9.1.33",
+    "contentful": "^9.1.34",
     "install": "^0.13.0",
     "lodash.camelcase": "^4.3.0",
     "lodash.upperfirst": "^4.3.1",
@@ -41,9 +41,9 @@
     "primeflex": "^3.2.1",
     "primeicons": "^5.0.0",
     "prism-themes": "^1.9.0",
-    "prismjs": "^1.28.0",
-    "typescript": "^4.7.4",
+    "prismjs": "^1.29.0",
+    "typescript": "^4.8.2",
     "vue-gtag": "^2.0.1",
-    "vue-i18n": "^9.1.10"
+    "vue-i18n": "^9.2.2"
   }
 }

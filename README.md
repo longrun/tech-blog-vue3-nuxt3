@@ -29,13 +29,13 @@ Minimal features.
 
 Top Page | Article Page
 -- | --
-<img width="1345" alt="スクリーンショット 2022-05-02 10 23 02" src="https://user-images.githubusercontent.com/15245958/166173789-cca850d3-80f7-4586-b887-bf85e599c114.png"> | <img width="1354" alt="スクリーンショット 2022-05-02 10 22 43" src="https://user-images.githubusercontent.com/15245958/166173807-295251e7-ac2c-490f-8f53-96af00d348b5.png">
-<img width="759" alt="スクリーンショット 2022-05-02 10 16 52" src="https://user-images.githubusercontent.com/15245958/166173629-f6bf71b4-2e6b-4f5c-91b8-6eac17ed7f8b.png"> | <img width="773" alt="スクリーンショット 2022-05-02 10 18 13" src="https://user-images.githubusercontent.com/15245958/166173633-80dc1607-038d-45be-a50b-f2c3c5a9cb43.png">
+<img width="1345" src="https://user-images.githubusercontent.com/15245958/166173789-cca850d3-80f7-4586-b887-bf85e599c114.png"> | <img width="1354" src="https://user-images.githubusercontent.com/15245958/166173807-295251e7-ac2c-490f-8f53-96af00d348b5.png">
+<img width="759" src="https://user-images.githubusercontent.com/15245958/166173629-f6bf71b4-2e6b-4f5c-91b8-6eac17ed7f8b.png"> | <img width="773" src="https://user-images.githubusercontent.com/15245958/166173633-80dc1607-038d-45be-a50b-f2c3c5a9cb43.png">
 
 
 # Init
 
-- Install Node.js (recommend v16.14.2^)
+- Install Node.js (recommend v16.17.0^)
 - Install VSCode extenstion of `Volar`
 - Do `yarn install`
 
@@ -54,9 +54,9 @@ Tag setting example in in this project. Navigation sort order can controlled by 
 Make sure to rename file `.env.template` to `.env` and write Contentful Identify and Token.
 
 ```
-CONTENTFUL_CONTENT_KEY=<your contentful content id>
-CONTENTFUL_SPACE_ID=<your contentful space id>
-CONTENTFUL_ACCESS_TOKEN=<your contentful access token>
+CONTENTFUL_CONTENT_KEY=<your contentful Content Type id>
+CONTENTFUL_SPACE_ID=<your contentful Space id>
+CONTENTFUL_ACCESS_TOKEN=<your contentful Delivery API Key>
 ```
 
 If you want Google Analytics, write GA_ID.
