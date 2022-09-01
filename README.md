@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c6e1d7a1-6034-4312-9255-452c9e725b7e/deploy-status)](https://app.netlify.com/sites/delicate-custard-cc73d3/deploys)
-
 # Tech blog starter-kit with Vue 3, Nuxt 3 and Contentful
 
 - Vue 3
